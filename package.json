@@ -1,0 +1,28 @@
+{
+  "name": "gruntkit",
+  "version": "0.0.1",
+  "description": "gruntkit template",
+  "dependencies": {
+    "grunt": "~0.4.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-contrib-sass": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-htmlmin": "~0.1.3",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-preprocess": "~2.3.0",
+    "grunt-notify": "~0.2.7",
+    "grunt-env": "~0.4.0"
+  },
+  "author": {
+    "name": "jrod.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/jrodl3r/gruntkit.git"
+  },
+  "readme": "README.md"
+}

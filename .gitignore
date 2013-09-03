@@ -1,0 +1,28 @@
+# PROJECT #
+###########
+src
+dist
+dest
+.docs
+/index.html
+.sass-cache
+css/base.css
+css/dist.css
+js/dist.js
+node_modules
+*.sublime-project
+*.sublime-workspace
+
+
+# OSX/SYSTEM #
+##############
+.DS_Store
+.DS_Store*
+.DS_Store?
+ehthumbs.db
+Thumbs.db
+Icon?
+._*
+.Trashes
+.Spotlight-V100
+
