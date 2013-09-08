@@ -7,7 +7,7 @@
 * **✓** Implemented gruntjs build process
 * **✓** Setup sticky-footer page layout
 * **✓** Implemented primary-nav (status/main/sub/footer)
-* **✓** Setup nav selection JS-logic
+* **✓** Setup primary-nav JS-logic
 
 ###September 8th, 2013
 * NESW page navigation transition system
