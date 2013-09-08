@@ -1,14 +1,18 @@
 ##YourCare
 
-###Sept. 3rd, 2013
-* Implemented base file structure
-* Added boilerplate system
-* Implemented gruntjs build proc
-* Implemented core scss style def
-* Setup modular-panel page layout
+###September 6-7th, 2013
+* **✓** Setup git source control
+* **✓** Implemented base file structure
+* **✓** Added boilerplate system
+* **✓** Implemented gruntjs build process
+* **✓** Setup sticky-footer page layout
+* **✓** Implemented primary-nav (status/main/sub/footer)
+* **✓** Setup nav selection JS-logic
 
-###Sept. 4th, 2013
-* Drag-n-Drop panel functionality
+###September 8th, 2013
 * NESW page navigation transition system
+* Setup modular-panel layout component
+* Setup scalable css gradient background
+* Drag-n-Drop modular-panel functionality
 * Modal prompt transition system and functionality
 

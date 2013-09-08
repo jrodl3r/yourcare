@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>YourCare</title>
-  <meta name="description" content="YourCare Site">
+  <meta name="description" content="YourCare">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- @if NODE_ENV == 'DEV' --><link rel="stylesheet" href="css/base.css"><!-- @endif --><!-- @if NODE_ENV == 'DIST' --><link rel="stylesheet" href="css/dist.css"><!-- @endif -->
   <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -17,7 +17,58 @@
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <h1>YourCare</h1>
+  <div class="wrap">
+    <header>
+      <div class="statusbar">
+        <div class="inner">
+          <ul class="left">
+            <li><a class="messages" href="#">Messages</a></li>
+            <li><a class="alerts" href="#">Alerts</a></li>
+            <li><a class="profile" href="#">Profile</a></li>
+            <li><a class="share" href="#">Share</a></li>
+          </ul>
+          <ul class="right">
+            <li><a class="settings" href="#">Settings</a></li>
+            <li><a class="search" href="#">Search</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="inner">
+        <a class="home" href="#"><img src="img/header-logo.jpg" alt="YourCare"></a>
+        <nav class="main">
+          <ul>
+            <li><a class="health" href="#">Your Health</a></li>
+            <li><a class="goals" href="#">Your Goals</a></li>
+            <li class="wide"><a class="calendar" href="#">Your Calendar</a></li>
+            <li class="wide"><a class="community" href="#">Your Community</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="content">
+      <div class="inner">
+        <!-- <span>[Content]</span> -->
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="inner">
+      <div class="social">
+        <h4>Get Connected:</h4>
+        <ul>
+          <li><a class="facebook" href="#">Facebook</a></li>
+          <li><a class="twiiter" href="#">Twitter</a></li>
+          <li><a class="google" href="#">Google&plus;</a></li>
+          <li><a class="pinterest" href="#">Pinterest</a></li>
+        </ul>
+      </div>
+      <div class="invite">
+        <h4>Invite Your Friends:</h4>
+        <input type="text" name="invite" value=""><br>
+        <button class="aqua">Send Email</button>
+      </div>
+    </div>
+  </footer>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>

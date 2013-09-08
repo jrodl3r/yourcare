@@ -2,11 +2,11 @@
 // Base Stylesheet Assembler
 //
 // ==========================================================================
-// Featuring: HTML5 Boilerplate w/ Normalize, Sass, Compass + Susy.  
+// Featuring: HTML5 Boilerplate w/ Normalize, Sass, Compass + Susy.
 //
 // This is where all CSS Libraries are imported and assembled into the base
 // stylesheet. Please place your custom project variables, styles and mixins
-// inside '_core.scss' and '_mixins.scss'. For additional support with the 
+// inside '_core.scss' and '_mixins.scss'. For additional support with the
 // environment and application configuration - please refer to the README.
 //
 // ==========================================================================
@@ -36,10 +36,13 @@
 /* H5BP-Helpers */
 @include h5bp-helpers;
 
-/* Author's Mixins */
+// Author's Mixins
 @import 'mixins';
 
-/* Author's Styles */
+// Author's Fonts
+@import 'fonts';
+
+// Author's Styles
 @import 'core';
 
 /* H5BP-Media */
