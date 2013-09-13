@@ -36,14 +36,20 @@
 /* H5BP-Helpers */
 @include h5bp-helpers;
 
-// Author's Mixins
+// Mixins
 @import 'mixins';
 
-// Author's Fonts
-@import 'fonts';
-
-// Author's Styles
+// Styles
 @import 'core';
+
+// Styles
+@import 'nav';
+
+// Styles
+@import 'buttons';
+
+// Fonts
+@import 'fonts';
 
 /* H5BP-Media */
 @include h5bp-media;

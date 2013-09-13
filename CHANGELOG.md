@@ -15,4 +15,8 @@
 * Setup scalable css gradient background
 * Drag-n-Drop modular-panel functionality
 * Modal prompt transition system and functionality
+* Explore pinning mechanism options
+* Facebook style messages menu/modal iX
+* Quick-search slide-out iX
+
 
