@@ -3,13 +3,23 @@
 // ==========================================================================
 
 button {
+  padding: 0;
   color: white;
-  font-family: $font-multicolore;
   font-size: 12px;
+  font-family: $font-multicolore;
+  text-align: center;
+  background-color: $gray;
   border: 0;
   @include border-radius(4px);
   @include webkit-hardware-accel();
   @include transition-duration($default-delay);
+  @include no-outline();
+
+  &:hover {
+    color: lighten($light-gray, 15%);
+    background-color: lighten($gray, 3%);
+    @include no-outline();
+  }
 }
 
 button.aqua {
@@ -18,7 +28,6 @@ button.aqua {
   &:hover, &:focus {
     color: lighten($light-gray, 15%);
     background-color: lighten($aqua, 3%);
-    @include no-outline();
   }
 }
 

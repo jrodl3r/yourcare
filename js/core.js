@@ -11,19 +11,65 @@ var YC = {
   // Navigation Module
   Nav : {
 
-    sub_nav             :   $('header .submenu'),
-    home_link           :   $('header a.home'),
-    main_nav_links      :   $('header nav.main ul a'),
-    status_nav_links    :   $('header .statusbar ul a'),
-    sub_nav_links       :   $('header .submenu ul a'),
+    sub_nav               :   $('header .submenu'),
+    home_link             :   $('header a.home'),
+    main_nav_links        :   $('header nav.main ul a'),
+    status_nav_links      :   $('header .statusbar ul a'),
+    status_search_link    :   $('header .statusbar ul a.search'),
+    status_search_panel   :   $('header .statusbar ul li.status-search'),
+    status_search_box     :   $('header .statusbar ul li.status-search .searchbox'),
+    status_search_flag    :   false,
+    sub_nav_links         :   $('header .submenu ul a'),
+
+    nav_timer_delay       :   600,
 
     // Initialize Navigation
     init : function () {
+      // Primary Nav
       this.setupHomeLinks();
       this.setupStatusMenuLinks();
       this.setupMainMenuLinks();
       this.setupSubNavLinks();
+      // Alt Nav
+      this.setupStatusSearch();
     },
+
+    setupStatusSearch : function () {
+      this.status_search_link.bind('click', function ( e ) {
+        e.preventDefault();
+        YC.Nav.toggleStatusSearch();
+      });
+    },
+
+    showStatusSearch : function () {
+      this.status_nav_links.addClass( 'inactive' );
+      this.status_search_panel.addClass( 'active' );
+      setTimeout( function () {
+        YC.Nav.status_search_box.fadeIn();
+        YC.Nav.status_search_flag = true;
+      }, this.nav_timer_delay);
+    },
+
+    hideStatusSearch : function () {
+      this.status_search_box.fadeOut();
+      setTimeout( function () {
+        YC.Nav.status_search_panel.removeClass( 'active' );
+        YC.Nav.status_nav_links.removeClass( 'inactive' );
+        YC.Nav.status_search_flag = false;
+      }, this.nav_timer_delay);
+    },
+
+    toggleStatusSearch : function ( kill ) {
+      if ( kill && !this.status_search_flag ) {
+        this.hideStatusSearch();
+      } else if( !this.status_search_flag ) {
+        this.showStatusSearch();
+      } else {
+        this.hideStatusSearch();
+      }
+    },
+
+
 
     // Setup Home-Link Click/Tap
     setupHomeLinks : function () {
@@ -31,6 +77,7 @@ var YC = {
         e.preventDefault();
         YC.Nav.clearActiveLinks( YC.Nav.status_nav_links );
         YC.Nav.clearActiveLinks( YC.Nav.main_nav_links );
+        YC.Nav.toggleStatusSearch('kill');
       });
     },
 
@@ -41,7 +88,10 @@ var YC = {
           e.preventDefault();
           YC.Nav.clearActiveLinks( YC.Nav.main_nav_links );
           YC.Nav.clearActiveLinks( YC.Nav.status_nav_links );
-          $(this).addClass( 'active' );
+          if ( !$(this).hasClass( 'search' ) ) {
+            YC.Nav.toggleStatusSearch('kill');
+            $(this).addClass( 'active' );
+          }
         });
       });
     },
@@ -51,6 +101,7 @@ var YC = {
       this.main_nav_links.each( function () {
         $(this).bind( 'click', function ( e ) {
           e.preventDefault();
+          YC.Nav.toggleStatusSearch('kill');
           YC.Nav.clearActiveLinks( YC.Nav.main_nav_links );
           YC.Nav.clearActiveLinks( YC.Nav.status_nav_links );
 
