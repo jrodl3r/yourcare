@@ -85,9 +85,7 @@ var YC = {
     clearActiveLinks : function (link_set) {
       // Status Nav Links
       if ( link_set === this.status_nav_links ) {
-        link_set.each( function () {
-          $(this).removeClass( 'active' );
-        });
+        link_set.removeClass( 'active' );
       // Main Menu Links
       } else if ( link_set === this.main_nav_links ) {
         link_set.each( function () {

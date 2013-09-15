@@ -28,6 +28,7 @@ header nav.main {
         text-transform: uppercase;
         text-decoration: none;
         @include no-outline();
+        @include webkit-hardware-accel();
         @include transition-duration($default-delay);
 
         &:hover {
@@ -86,6 +87,7 @@ header .submenu {
         line-height: 36px;
         text-decoration: none;
         @include no-outline();
+        @include webkit-hardware-accel();
         @include transition-duration($default-delay);
         border-right: 1px solid lighten($subnav-color, 25%);
 
@@ -141,6 +143,7 @@ header .statusbar {
         text-indent: -9999px;
         background: url(../img/statusbar-icons.png) left top no-repeat;
         @include no-outline();
+        @include webkit-hardware-accel();
         @include transition-duration($nav-delay);
 
         &.messages {
@@ -247,7 +250,7 @@ footer .social ul {
       &:hover {
         border-radius: 16px;
         box-shadow: 0 0 10px 3px rgba(white, .5);
-        opacity: 0.7;
+        opacity: 0.75;
       }
     }
   }
@@ -265,11 +268,13 @@ footer .invite {
     text-align: center;
     border: 1px solid $gray;
     @include border-radius(10px);
-    @include box-shadow(rgba(black, .5) 0 0 2px inset);
+    @include box-shadow(rgba(black, .5) 0 0 1px inset);
     @include no-outline();
+    @include webkit-hardware-accel();
+    @include transition-duration($nav-delay);
 
     &:hover {
-      opacity: 0.65;
+      opacity: 0.5;
     }
 
     &:focus {

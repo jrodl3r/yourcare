@@ -98,7 +98,9 @@ footer {
 // ==========================================================================
 
 h1 {
-  color: $red;
+  color: $aqua;
+  font-family: $font-multicolore;
+  text-shadow: 0 0 10px rgba(black, 0.45);
 }
 
 .content .inner {
