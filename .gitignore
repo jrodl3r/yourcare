@@ -4,7 +4,6 @@ src
 dist
 dest
 .docs
-/index.html
 .sass-cache
 css/base.css
 css/dist.css
