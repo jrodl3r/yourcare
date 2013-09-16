@@ -210,14 +210,14 @@ header .statusbar .status-search {
   .searchbox {
     display: none;
     float: left;
-    margin: 4px 0 0 40px;
+    margin: 3px 0 0 40px;
     border-radius: 17px;
-    border: 2px solid rgba(white, .4);
-    box-shadow: 0 0 6px 1px rgba(white, .25);
+    border: 3px solid rgba(white, .3);
+    box-shadow: 0 0 6px 1px rgba(white, .15);
 
     input {
       float: left;
-      height: 29px;
+      height: 30px;
       width: 245px;
       padding: 0;
       color: $light-gray;
@@ -226,20 +226,21 @@ header .statusbar .status-search {
       background-color: white;
       border: 0;
       border-radius: 15px 0 0 15px;
-      opacity: .85;
+      //opacity: .85;
       @include no-outline();
 
       &:focus {
         color: $gray;
-        opacity: 1;
+        //opacity: 1;
         box-shadow: inset 0 0 3px 0 rgba(black, .25);
       }
     }
 
     button {
       float: right;
-      height: 29px;
+      height: 30px;
       width: 36px;
+      padding-top: 1px;
       text-indent: 0;
       border-radius: 0 15px 15px 0;
     }

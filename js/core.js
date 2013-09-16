@@ -18,9 +18,10 @@ var YC = {
     status_search_link    :   $('header .statusbar ul a.search'),
     status_search_panel   :   $('header .statusbar ul li.status-search'),
     status_search_box     :   $('header .statusbar ul li.status-search .searchbox'),
-    status_search_flag    :   false,
+    status_search_input   :   $('header .statusbar ul li.status-search .searchbox input'),
     sub_nav_links         :   $('header .submenu ul a'),
 
+    status_search_flag    :   false,
     nav_timer_delay       :   600,
 
     // Initialize Navigation
@@ -34,42 +35,10 @@ var YC = {
       this.setupStatusSearch();
     },
 
-    setupStatusSearch : function () {
-      this.status_search_link.bind('click', function ( e ) {
-        e.preventDefault();
-        YC.Nav.toggleStatusSearch();
-      });
-    },
 
-    showStatusSearch : function () {
-      this.status_nav_links.addClass( 'inactive' );
-      this.status_search_panel.addClass( 'active' );
-      setTimeout( function () {
-        YC.Nav.status_search_box.fadeIn();
-        YC.Nav.status_search_flag = true;
-      }, this.nav_timer_delay);
-    },
-
-    hideStatusSearch : function () {
-      this.status_search_box.fadeOut();
-      setTimeout( function () {
-        YC.Nav.status_search_panel.removeClass( 'active' );
-        YC.Nav.status_nav_links.removeClass( 'inactive' );
-        YC.Nav.status_search_flag = false;
-      }, this.nav_timer_delay);
-    },
-
-    toggleStatusSearch : function ( kill ) {
-      if ( kill && !this.status_search_flag ) {
-        this.hideStatusSearch();
-      } else if( !this.status_search_flag ) {
-        this.showStatusSearch();
-      } else {
-        this.hideStatusSearch();
-      }
-    },
-
-
+/********************************************/
+/*  Primary Nav                             */
+/********************************************/
 
     // Setup Home-Link Click/Tap
     setupHomeLinks : function () {
@@ -154,7 +123,63 @@ var YC = {
       } else {
         console.error('YC.Nav.clearActiveLinks() : Fall-Through Error (Failed)');
       }
-    }
+    },
+
+
+/********************************************/
+/*  Alt Nav                                 */
+/********************************************/
+
+    //
+    setupStatusSearch : function () {
+      this.status_search_link.bind( 'click', function ( e ) {
+        e.preventDefault();
+        YC.Nav.toggleStatusSearch();
+      });
+      this.status_search_input.on( 'focus blur', function () {
+        YC.Nav.toggleAutofill( $(this) );
+      });
+    },
+
+    //
+    showStatusSearch : function () {
+      this.status_nav_links.addClass( 'inactive' );
+      this.status_search_panel.addClass( 'active' );
+      setTimeout( function () {
+        YC.Nav.status_search_box.fadeIn();
+        YC.Nav.status_search_flag = true;
+      }, this.nav_timer_delay);
+    },
+
+    //
+    hideStatusSearch : function () {
+      this.status_search_box.fadeOut();
+      setTimeout( function () {
+        YC.Nav.status_search_panel.removeClass( 'active' );
+        YC.Nav.status_nav_links.removeClass( 'inactive' );
+        YC.Nav.status_search_flag = false;
+      }, this.nav_timer_delay);
+    },
+
+    //
+    toggleStatusSearch : function ( kill ) {
+      if ( kill && !this.status_search_flag ) {
+        this.hideStatusSearch();
+      } else if( !this.status_search_flag ) {
+        this.showStatusSearch();
+      } else {
+        this.hideStatusSearch();
+      }
+    },
+
+    //
+    toggleAutofill : function ( input ) {
+      if ( input.val() === '' ) {
+        input.val('Search');
+      } else if ( input.val() === 'Search' ) {
+        input.val('');
+      }
+    },
   }
 };
 
