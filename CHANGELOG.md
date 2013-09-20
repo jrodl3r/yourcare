@@ -6,17 +6,19 @@
 * **✓** Added boilerplate system
 * **✓** Implemented gruntjs build process
 * **✓** Setup sticky-footer page layout
-* **✓** Implemented primary-nav (status/main/sub/footer)
+* **✓** Implemented primary-nav
 * **✓** Setup primary-nav JS-logic
 
-###September 8th, 2013
-* NESW page navigation transition system
-* Setup modular-panel layout component
-* Setup scalable css gradient background
-* Drag-n-Drop modular-panel functionality
+###September 8th-?st, 2013
+* **✓** Quick-Search slide-out
+* AngularJS page routes + module system
+* Setup modular-panel layout
+* Drag-n-Drop modular-panel logic
 * Modal prompt transition system and functionality
-* Explore pinning mechanism options
-* Facebook style messages menu/modal iX
-* Quick-search slide-out iX
+* Messages menu + modal system (fb-style)
 
+
+###Next
+* Explore 'pinning concept' ideas
+* Setup scalable css gradient background
 
