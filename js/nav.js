@@ -47,7 +47,6 @@ YC.Nav = {
     this.status_nav_links.each( function () {
       $(this).bind( 'click', function (e) {
         e.preventDefault();
-        //YC.Nav.clearActiveLinks( YC.Nav.main_nav_links );
         YC.Nav.clearActiveLinks( YC.Nav.status_nav_links );
         if ( !$(this).hasClass( 'search' ) ) {
           YC.Nav.toggleStatusSearch('kill');
@@ -81,7 +80,6 @@ YC.Nav = {
   setupSubNavLinks : function () {
     this.sub_nav_links.each( function () {
       $(this).bind( 'click', function () {
-        //e.preventDefault();
         YC.Nav.sub_nav_links.each( function () {
           if( $(this).hasClass( 'active' ) ) {
             $(this).removeClass( 'active' );
