@@ -166,7 +166,6 @@ YC.Nav = {
 
   //
   toggleAutofill : function ( input ) {
-    console.log(input.val());
     if ( input.val() === '' ) {
       input.val('Search');
     } else if ( input.val() === 'Search' ) {

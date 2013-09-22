@@ -12,8 +12,9 @@
 ###September 8th-20th, 2013
 * **✓** Quick-Search slide-out
 * **✓** Setup AngluarJS + SPA (.htaccess config)
-* Added AngularJS page views + url routes
+* **✓** Added AngularJS page views + url routes
 * Setup susy grid system
+* Setup 2x-Retina/SVG graphics
 * Setup modular-panel layout (frosted, etc.)
 
 ###September 22nd-30th, 2013
@@ -23,7 +24,6 @@
 
 ###Next
 * Explore 'pinning concept' ideas
-* Setup 2x-Retina/SVG graphics
 * Setup scalable css gradient background
 * Panel fade load-in (pinterest-style)
 
