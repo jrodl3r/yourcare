@@ -102,10 +102,18 @@ footer {
 // ==========================================================================
 
 h1, h2, h3 {
-  color: $blue;
+  color: $main-color;
   font-family: $font-multicolore;
-  //text-shadow: 0 0 10px rgba(black, 0.45);
+  text-shadow: 0 0 10px rgba(black, 0.45);
   //text-indent: 15px;
+}
+
+h2 {
+  color: $blue;
+
+  &.red {
+    color: $red;
+  }
 }
 
 .content .inner {
@@ -113,13 +121,13 @@ h1, h2, h3 {
 
   .area {
 
-    &#home,
-    &#health,
-    &#goals,
-    &#calendar,
-    &#community {
-      display: none;
-    }
+    // &#home,
+    // &#health,
+    // &#goals,
+    // &#calendar,
+    // &#community {
+    //   display: none;
+    // }
 
     .panel {
       float: left;

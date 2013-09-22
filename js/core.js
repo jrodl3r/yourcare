@@ -6,8 +6,8 @@ var YC = {
 
   init : function () {
 
+   // this.App.init();
     this.Nav.init();
-
   }
 };
 

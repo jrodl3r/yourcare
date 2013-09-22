@@ -422,15 +422,20 @@ footer {
 }
 
 h1, h2, h3 {
-  color: #007aff;
+  color: #35bdb2;
   font-family: Multicolore, Helvetica, Arial, sans-serif;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+}
+
+h2 {
+  color: #007aff;
+}
+h2.red {
+  color: #d91c5c;
 }
 
 .content .inner {
   padding: 70px 20px 50px;
-}
-.content .inner .area#home, .content .inner .area#health, .content .inner .area#goals, .content .inner .area#calendar, .content .inner .area#community {
-  display: none;
 }
 .content .inner .area .panel {
   float: left;
@@ -511,6 +516,7 @@ header nav.main ul li a {
   transition-duration: 0.6s;
 }
 header nav.main ul li a:hover {
+  text-shadow: 0 0 2px rgba(53, 189, 178, 0.5);
   opacity: 0.70;
 }
 header nav.main ul li a.active {
@@ -518,6 +524,7 @@ header nav.main ul li a.active {
   font-family: Multicolore, Helvetica, Arial, sans-serif;
 }
 header nav.main ul li a.active:hover {
+  text-shadow: none;
   opacity: 1.0;
   cursor: default;
 }
@@ -681,10 +688,6 @@ header .statusbar .status-search {
   -moz-transition-duration: 0.6s;
   -o-transition-duration: 0.6s;
   transition-duration: 0.6s;
-  -webkit-transition-timing-function: ease-in;
-  -moz-transition-timing-function: ease-in;
-  -o-transition-timing-function: ease-in;
-  transition-timing-function: ease-in;
 }
 header .statusbar .status-search.active {
   width: 330px;
@@ -705,14 +708,23 @@ header .statusbar .status-search .searchbox input {
   color: rgba(255, 255, 255, 0.75);
   font-size: 13px;
   text-indent: 10px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
   border: 0;
   border-radius: 15px 0 0 15px;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.6s;
+  -moz-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  transition-duration: 0.6s;
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }
 header .statusbar .status-search .searchbox input:focus {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 header .statusbar .status-search .searchbox button {
   float: right;
