@@ -36,7 +36,6 @@ YC.Nav = {
   // Setup Home-Link Click/Tap
   setupHomeLinks : function () {
     this.home_link.bind( 'click', function () {
-      //e.preventDefault();
       YC.Nav.clearActiveLinks( YC.Nav.status_nav_links );
       YC.Nav.clearActiveLinks( YC.Nav.main_nav_links );
       YC.Nav.toggleStatusSearch('kill');
@@ -46,9 +45,9 @@ YC.Nav = {
   // Setup Status Menu Clicks/Taps
   setupStatusMenuLinks : function () {
     this.status_nav_links.each( function () {
-      $(this).bind( 'click', function ( e ) {
+      $(this).bind( 'click', function (e) {
         e.preventDefault();
-        YC.Nav.clearActiveLinks( YC.Nav.main_nav_links );
+        //YC.Nav.clearActiveLinks( YC.Nav.main_nav_links );
         YC.Nav.clearActiveLinks( YC.Nav.status_nav_links );
         if ( !$(this).hasClass( 'search' ) ) {
           YC.Nav.toggleStatusSearch('kill');
@@ -62,7 +61,6 @@ YC.Nav = {
   setupMainMenuLinks : function () {
     this.main_nav_links.each( function () {
       $(this).bind( 'click', function () {
-        //e.preventDefault();
         YC.Nav.toggleStatusSearch('kill');
         YC.Nav.clearActiveLinks( YC.Nav.main_nav_links );
         YC.Nav.clearActiveLinks( YC.Nav.status_nav_links );
@@ -82,8 +80,8 @@ YC.Nav = {
   // Setup Sub-Nav Menu Clicks/Taps
   setupSubNavLinks : function () {
     this.sub_nav_links.each( function () {
-      $(this).bind( 'click', function ( e ) {
-        e.preventDefault();
+      $(this).bind( 'click', function () {
+        //e.preventDefault();
         YC.Nav.sub_nav_links.each( function () {
           if( $(this).hasClass( 'active' ) ) {
             $(this).removeClass( 'active' );
@@ -124,7 +122,7 @@ YC.Nav = {
 
   //
   setupStatusSearch : function () {
-    this.status_search_link.bind( 'click', function ( e ) {
+    this.status_search_link.bind( 'click', function (e) {
       e.preventDefault();
       YC.Nav.toggleStatusSearch();
     });
