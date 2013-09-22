@@ -424,11 +424,11 @@ footer {
 h1, h2, h3 {
   color: #35bdb2;
   font-family: Multicolore, Helvetica, Arial, sans-serif;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
 }
 
 h2 {
   color: #007aff;
+  text-indent: 15px;
 }
 h2.red {
   color: #d91c5c;

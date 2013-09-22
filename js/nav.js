@@ -35,8 +35,8 @@ YC.Nav = {
 
   // Setup Home-Link Click/Tap
   setupHomeLinks : function () {
-    this.home_link.bind( 'click', function ( e ) {
-      e.preventDefault();
+    this.home_link.bind( 'click', function () {
+      //e.preventDefault();
       YC.Nav.clearActiveLinks( YC.Nav.status_nav_links );
       YC.Nav.clearActiveLinks( YC.Nav.main_nav_links );
       YC.Nav.toggleStatusSearch('kill');
@@ -61,8 +61,8 @@ YC.Nav = {
   // Setup Main Menu Clicks/Taps
   setupMainMenuLinks : function () {
     this.main_nav_links.each( function () {
-      $(this).bind( 'click', function ( e ) {
-        e.preventDefault();
+      $(this).bind( 'click', function () {
+        //e.preventDefault();
         YC.Nav.toggleStatusSearch('kill');
         YC.Nav.clearActiveLinks( YC.Nav.main_nav_links );
         YC.Nav.clearActiveLinks( YC.Nav.status_nav_links );
