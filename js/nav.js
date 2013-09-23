@@ -60,10 +60,8 @@ YC.Nav = {
   setupMainMenuLinks : function () {
     this.main_nav_links.each( function () {
       $(this).bind( 'click', function () {
-        YC.Nav.toggleStatusSearch('kill');
         YC.Nav.clearActiveLinks( YC.Nav.main_nav_links );
         YC.Nav.clearActiveLinks( YC.Nav.status_nav_links );
-
         $(this).parent().animate({
           'background-position-y': '34px'
         });
