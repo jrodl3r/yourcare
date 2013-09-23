@@ -14,7 +14,7 @@
 * **READY** Setup AngluarJS + SPA (.htaccess config)
 * **READY** Added AngularJS page views + url routes
 * Setup susy grid system
-* Setup 2x-Retina/SVG graphics
+* **READY** Setup 2x-Retina/SVG graphics
 * Setup modular-panel layout (frosted, etc.)
 
 ###September 22nd-30th, 2013
