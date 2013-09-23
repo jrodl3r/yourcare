@@ -770,13 +770,13 @@ footer .social ul {
   padding: 0;
   list-style: none;
   display: inline-block;
-  height: 34px;
+  height: 35px;
   margin-top: 10px;
 }
 footer .social ul li {
   float: left;
   height: inherit;
-  width: 34px;
+  width: 35px;
   padding-right: 17px;
 }
 footer .social ul li:last-of-type {
@@ -790,23 +790,25 @@ footer .social ul li a {
   -o-transition-duration: 0.4s;
   transition-duration: 0.4s;
   float: left;
-  height: 34px;
-  width: 34px;
+  height: 35px;
+  width: 35px;
   text-indent: -9999px;
-  background: url(../img/social-icons.png) left top no-repeat;
+}
+footer .social ul li a.facebook {
+  background: url(../img/social-facebook.svg) no-repeat;
 }
 footer .social ul li a.twiiter {
-  background-position: -54px 0;
+  background: url(../img/social-twitter.svg) no-repeat;
 }
 footer .social ul li a.google {
-  background-position: -108px 0;
+  background: url(../img/social-google.svg) no-repeat;
 }
 footer .social ul li a.pinterest {
-  background-position: right 0;
+  background: url(../img/social-pinterest.svg) no-repeat;
 }
 footer .social ul li a:hover {
   border-radius: 16px;
-  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.5);
   opacity: 0.75;
 }
 

@@ -283,13 +283,13 @@ footer .invite {
 footer .social ul {
   @include reset-list();
   display: inline-block;
-  height: 34px;
+  height: 35px;
   margin-top: 10px;
 
   li {
     float: left;
     height: inherit;
-    width: 34px;
+    width: 35px;
     padding-right: 17px;
 
     &:last-of-type {
@@ -300,24 +300,26 @@ footer .social ul {
       @include no-outline();
       @include transition-duration($nav-delay);
       float: left;
-      height: 34px;
-      width: 34px;
+      height: 35px;
+      width: 35px;
       text-indent: -9999px;
-      background: url(../img/social-icons.png) left top no-repeat;
 
+      &.facebook {
+        background: url(../img/social-facebook.svg) no-repeat;
+      }
       &.twiiter {
-        background-position: -54px 0;
+        background: url(../img/social-twitter.svg) no-repeat;
       }
       &.google {
-        background-position: -108px 0;
+        background: url(../img/social-google.svg) no-repeat;
       }
       &.pinterest {
-        background-position: right 0;
+        background: url(../img/social-pinterest.svg) no-repeat;
       }
 
       &:hover {
         border-radius: 16px;
-        box-shadow: 0 0 10px 3px rgba(white, .5);
+        box-shadow: 0 0 5px 3px rgba(white, .5);
         opacity: 0.75;
       }
     }
