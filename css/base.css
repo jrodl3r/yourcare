@@ -386,7 +386,10 @@ header {
 }
 header a.home {
   float: left;
+  height: 48px;
+  width: 322px;
   margin: 24px 0 0;
+  background: url(../img/logo.svg) no-repeat;
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -436,6 +439,9 @@ h2.red {
 
 .content .inner {
   padding: 70px 20px 50px;
+}
+.content .inner .area#home, .content .inner .area#health, .content .inner .area#goals, .content .inner .area#calendar, .content .inner .area#community {
+  display: none;
 }
 .content .inner .area .panel {
   float: left;
@@ -622,7 +628,6 @@ header .statusbar ul li a {
   margin-top: 6px;
   margin-right: 30px;
   text-indent: -9999px;
-  background: url(../img/statusbar-icons.png) left top no-repeat;
   outline: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-transform: translate3d(0, 0, 0);
@@ -633,26 +638,31 @@ header .statusbar ul li a {
 }
 header .statusbar ul li a.messages {
   width: 36px;
+  background: url(../img/icons/messages.svg) no-repeat;
 }
 header .statusbar ul li a.alerts {
+  height: 30px;
   width: 30px;
-  background-position: -56px 0;
+  background: url(../img/icons/alerts.svg) no-repeat;
 }
 header .statusbar ul li a.profile {
-  width: 31px;
-  background-position: -106px 0;
+  width: 30px;
+  background: url(../img/icons/profile.svg) no-repeat;
 }
 header .statusbar ul li a.share {
+  height: 32px;
   width: 32px;
-  background-position: -157px 0;
+  margin-top: 5px;
+  background: url(../img/icons/share.svg) no-repeat;
 }
 header .statusbar ul li a.settings {
   width: 28px;
-  background-position: -209px 1px;
+  margin-top: 7px;
+  background: url(../img/icons/settings.svg) no-repeat;
 }
 header .statusbar ul li a.search {
   width: 29px;
-  background-position: -257px 0;
+  background: url(../img/icons/search.svg) no-repeat;
 }
 header .statusbar ul li a.search.inactive {
   margin-left: 10px;

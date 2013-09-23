@@ -1,18 +1,18 @@
 ##YourCare
 
 ###September 6-7th, 2013
-* **✓** Setup git source control
-* **✓** Implemented base file structure
-* **✓** Added boilerplate system
-* **✓** Implemented gruntjs build process
-* **✓** Setup sticky-footer page layout
-* **✓** Implemented primary-nav
-* **✓** Setup primary-nav JS-logic
+* **READY** Setup git source control
+* **READY** Implemented base file structure
+* **READY** Added boilerplate system
+* **READY** Implemented gruntjs build process
+* **READY** Setup sticky-footer page layout
+* **READY** Implemented primary-nav
+* **READY** Setup primary-nav JS-logic
 
 ###September 8th-20th, 2013
-* **✓** Quick-Search slide-out
-* **✓** Setup AngluarJS + SPA (.htaccess config)
-* **✓** Added AngularJS page views + url routes
+* **READY** Quick-Search slide-out
+* **READY** Setup AngluarJS + SPA (.htaccess config)
+* **READY** Added AngularJS page views + url routes
 * Setup susy grid system
 * Setup 2x-Retina/SVG graphics
 * Setup modular-panel layout (frosted, etc.)
@@ -26,4 +26,7 @@
 * Explore 'pinning concept' ideas
 * Setup scalable css gradient background
 * Panel fade load-in (pinterest-style)
+* Statusbar pop-under labels
+
+
 

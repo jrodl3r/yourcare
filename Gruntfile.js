@@ -158,6 +158,12 @@ module.exports = function(grunt){
 				enabled: true,
 				max_jshint_notifications: 0 // max jshint msg
 			}
+		},
+		webfont: {
+			icons: {
+				src: 'img/icons/*.svg',
+				dest: 'build/fonts'
+			}
 		}
 	});
 
@@ -168,10 +174,12 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-preprocess');
+	grunt.loadNpmTasks('grunt-webfont');
 	grunt.loadNpmTasks('grunt-notify');
 	grunt.loadNpmTasks('grunt-env');
 
 	grunt.registerTask('default', ['clean:html', 'env:dev', 'sass:dev', 'jshint', 'preprocess', 'htmlmin', 'notify:dev']);
+	grunt.registerTask('webfont', ['webfont']);
 	grunt.registerTask('dist-css', ['sass:dist', 'notify:sass']);
 	grunt.registerTask('dist-js', ['clean:js', 'jshint', 'uglify', 'notify:js']);
 	grunt.registerTask('dist', ['env:dist', 'clean', 'sass:dist', 'jshint', 'uglify', 'preprocess', 'htmlmin', 'notify:dist']);

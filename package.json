@@ -16,7 +16,8 @@
     "grunt-preprocess": "~2.3.0",
     "grunt-notify": "~0.2.7",
     "grunt-env": "~0.4.0",
-    "grunt": "~0.4.1"
+    "grunt": "~0.4.1",
+    "grunt-webfont": "~0.1.9"
   },
   "author": {
     "name": "jrod.io"

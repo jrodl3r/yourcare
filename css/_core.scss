@@ -60,7 +60,10 @@ header {
 
   a.home {
     float: left;
+    height: 48px;
+    width: 322px;
     margin: 24px 0 0;
+    background: url(../img/logo.svg) no-repeat;
     @include no-outline();
   }
 }
@@ -120,6 +123,14 @@ h2 {
   padding: 70px 20px 50px;
 
   .area {
+
+    &#home,
+    &#health,
+    &#goals,
+    &#calendar,
+    &#community {
+      display: none;
+    }
 
     .panel {
       float: left;
