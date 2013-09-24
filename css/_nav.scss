@@ -5,6 +5,7 @@
 header nav.main {
   float: right;
   margin-top: 54px;
+  overflow: hidden;
 
   ul {
     @include reset-list();
@@ -14,22 +15,31 @@ header nav.main {
       float: left;
       height: 43px;
       width: 130px;
-      text-align: center;
-      background: url(../img/nav-arrow.png) center 43px no-repeat;
+      overflow: hidden;
 
       &.wide {
         width: 160px;
+
+        a {
+          width: 160px;
+        }
       }
 
       a {
+        display: inline-block;
+        height: inherit;
+        width: 130px;
+        padding: 0;
         color: $nav-text-color;
         font-size: 14px;
         font-family: $font-gotham;
         text-transform: uppercase;
         text-decoration: none;
+        text-align: center;
+        background: url(../img/nav-marker.svg) center 43px no-repeat;
         @include no-outline();
         @include webkit-hardware-accel();
-        @include transition-duration($default-delay);
+        @include transition-duration($nav-delay);
 
         &:hover {
           text-shadow: 0 0 2px rgba($main-color, .5);
@@ -39,6 +49,7 @@ header nav.main {
         &.active {
           color: lighten($subnav-active-color, 10%);
           font-family: $font-multicolore;
+          background-position: center 35px;
 
           &:hover {
             text-shadow: none;

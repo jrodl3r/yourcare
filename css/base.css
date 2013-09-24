@@ -438,10 +438,8 @@ h2.red {
 }
 
 .content .inner {
+  min-width: 920px;
   padding: 70px 20px 50px;
-}
-.content .inner .area#home, .content .inner .area#health, .content .inner .area#goals, .content .inner .area#calendar, .content .inner .area#community {
-  display: none;
 }
 .content .inner .area .panel {
   float: left;
@@ -490,6 +488,7 @@ h2.red {
 header nav.main {
   float: right;
   margin-top: 54px;
+  overflow: hidden;
 }
 header nav.main ul {
   margin: 0;
@@ -501,25 +500,33 @@ header nav.main ul li {
   float: left;
   height: 43px;
   width: 130px;
-  text-align: center;
-  background: url(../img/nav-arrow.png) center 43px no-repeat;
+  overflow: hidden;
 }
 header nav.main ul li.wide {
   width: 160px;
 }
+header nav.main ul li.wide a {
+  width: 160px;
+}
 header nav.main ul li a {
+  display: inline-block;
+  height: inherit;
+  width: 130px;
+  padding: 0;
   color: #00254c;
   font-size: 14px;
   font-family: GothamBook, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
+  background: url(../img/nav-marker.svg) center 43px no-repeat;
   outline: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-transform: translate3d(0, 0, 0);
-  -webkit-transition-duration: 0.6s;
-  -moz-transition-duration: 0.6s;
-  -o-transition-duration: 0.6s;
-  transition-duration: 0.6s;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
 header nav.main ul li a:hover {
   text-shadow: 0 0 2px rgba(53, 189, 178, 0.5);
@@ -528,6 +535,7 @@ header nav.main ul li a:hover {
 header nav.main ul li a.active {
   color: #8cd8fb;
   font-family: Multicolore, Helvetica, Arial, sans-serif;
+  background-position: center 35px;
 }
 header nav.main ul li a.active:hover {
   text-shadow: none;

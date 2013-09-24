@@ -62,9 +62,9 @@ YC.Nav = {
       $(this).bind( 'click', function () {
         YC.Nav.clearActiveLinks( YC.Nav.main_nav_links );
         YC.Nav.clearActiveLinks( YC.Nav.status_nav_links );
-        $(this).parent().animate({
+        /*$(this).parent().animate({
           'background-position-y': '34px'
-        });
+        });*/
         YC.Nav.sub_nav.animate({
           height: 'toggle',
           opacity: 'toggle'
