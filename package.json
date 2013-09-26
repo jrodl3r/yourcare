@@ -1,7 +1,7 @@
 {
-  "name": "gruntkit",
+  "name": "yourcare",
   "version": "0.0.1",
-  "description": "gruntkit template",
+  "description": "yourcare webapp",
   "dependencies": {
     "grunt": "~0.4.1"
   },
@@ -15,9 +15,7 @@
     "grunt-contrib-clean": "~0.5.0",
     "grunt-preprocess": "~2.3.0",
     "grunt-notify": "~0.2.7",
-    "grunt-env": "~0.4.0",
-    "grunt": "~0.4.1",
-    "grunt-webfont": "~0.1.9"
+    "grunt-env": "~0.4.0"
   },
   "author": {
     "name": "jrod.io"

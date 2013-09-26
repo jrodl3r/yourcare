@@ -57,15 +57,6 @@ header {
   background-color: white;
   border-bottom: 3px solid $main-color;
   @include box-shadow(rgba(black, .15) 0 2px 2px);
-
-  a.home {
-    float: left;
-    height: 48px;
-    width: 322px;
-    margin: 24px 0 0;
-    background: url(../img/logo.svg) no-repeat;
-    @include no-outline();
-  }
 }
 
 .content {

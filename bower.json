@@ -1,0 +1,25 @@
+{
+  "name": "yourcare",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jrodl3r/yourcare",
+  "authors": [
+    "John Rodler <john@jrod.info>"
+  ],
+  "description": "yourcare webapp",
+  "main": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "~1.2.0-rc.2",
+    "jquery": "1.10.2"
+  },
+  "devDependencies": {
+    "angular": "~1.0.8"
+  }
+}
