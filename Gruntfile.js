@@ -26,18 +26,21 @@ module.exports = function(grunt){
 					sourcemap: false
 				},
 				files: {
-					'css/dist.css': 'css/base.scss'
+					'css/dist.min.css': 'css/base.scss'
 				}
 			}
 		},
 
 		uglify: {
 			options: {
-				banner: '<%= banner %>'
+				banner: '<%= banner %>',
+				mangle: {
+					except: ['$routeProvider']
+				}
 			},
 			dist: {
 				src: '<%= jshint.dist.src %>',
-				dest: 'js/dist.js'
+				dest: 'js/dist.min.js'
 			}
 		},
 
@@ -66,9 +69,19 @@ module.exports = function(grunt){
 			},
 			dist: {
 				options: {
-					ignores: ['js/dist.js', 'js/app.js']
+					ignores: ['js/dist.min.js']
 				},
 				src: ['js/*.js']
+			}
+		},
+
+		concat: {
+			options: {
+				separator: '/**************************************/',
+			},
+			dist: {
+				src: ['js/vendor/angular/angular.min.js', 'js/vendor/angular-route/angular-route.min.js', 'js/vendor/jquery/jquery.min.js', 'js/dist.min.js'],
+				dest: 'js/dist.min.js'
 			}
 		},
 
@@ -93,7 +106,7 @@ module.exports = function(grunt){
 
 		clean: {
 			html: ['index.html'],
-			js: ['js/dist.js']
+			js: ['js/dist.min.js']
 		},
 
 		env: {
@@ -121,7 +134,7 @@ module.exports = function(grunt){
 				options: { livereload: true }
 			},
 			html: {
-				files: 'tmpl/index.html',
+				files: ['tmpl/index.html', 'partials/*.html'],
 				tasks: ['env:dev', 'preprocess', 'notify:dev'],
 				options: { livereload: true }
 			}
@@ -167,6 +180,7 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-preprocess');
 	grunt.loadNpmTasks('grunt-notify');
 	grunt.loadNpmTasks('grunt-env');
@@ -174,6 +188,6 @@ module.exports = function(grunt){
 	grunt.registerTask('default', ['clean:html', 'env:dev', 'sass:dev', 'jshint', 'preprocess', 'htmlmin', 'notify:dev']);
 	grunt.registerTask('dist-css', ['sass:dist', 'notify:sass']);
 	grunt.registerTask('dist-js', ['clean:js', 'jshint', 'uglify', 'notify:js']);
-	grunt.registerTask('dist', ['env:dist', 'clean', 'sass:dist', 'jshint', 'uglify', 'preprocess', 'htmlmin', 'notify:dist']);
+	grunt.registerTask('dist', ['env:dist', 'clean', 'sass:dist', 'jshint', 'uglify', 'concat', 'preprocess', 'htmlmin', 'notify:dist']);
 	grunt.task.run('notify_hooks');
 };
