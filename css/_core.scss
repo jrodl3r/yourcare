@@ -102,7 +102,7 @@ h1, h2, h3 {
 }
 
 h2 {
-  color: $yellow;
+  color: $blue;
   text-indent: 15px;
 
   &.red {
@@ -116,13 +116,13 @@ h2 {
 
   .area {
 
-    // &#home,
-    // &#health,
-    // &#goals,
-    // &#calendar,
-    // &#community {
-    //   display: none;
-    // }
+    &#home,
+    &#health,
+    &#goals,
+    &#calendar,
+    &#community {
+      display: none;
+    }
 
     .panel {
       float: left;
