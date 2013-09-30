@@ -58,7 +58,6 @@ header nav.main {
         text-align: center;
         background: inline_image('../img/nav-marker.svg') center 43px no-repeat;
         @include no-outline();
-        @include webkit-hardware-accel();
         @include transition-duration($nav-delay);
 
         &:hover {
@@ -122,8 +121,7 @@ header .submenu {
         line-height: 36px;
         text-decoration: none;
         @include no-outline();
-        @include webkit-hardware-accel();
-        @include transition-duration($default-delay);
+        @include transition-duration($nav-delay);
         border-right: 1px solid lighten($subnav-color, 25%);
 
         &:hover {
@@ -178,7 +176,6 @@ header .statusbar {
         margin-right: 30px;
         @extend .ir;
         @include no-outline();
-        @include webkit-hardware-accel();
         @include transition-duration($nav-delay);
 
         &.messages {
@@ -246,7 +243,6 @@ header .statusbar .status-search {
   width: 0;
   opacity: 0;
   overflow: hidden;
-  @include webkit-hardware-accel();
   @include transition-property(all);
   @include transition-duration($default-delay);
 
@@ -274,7 +270,6 @@ header .statusbar .status-search {
       background-color: rgba(white, .3);
       border: 0;
       border-radius: 15px 0 0 15px;
-      @include webkit-hardware-accel();
       @include transition-property(all);
       @include transition-duration($default-delay);
       @include no-outline();
@@ -389,7 +384,6 @@ footer .invite {
     @include border-radius(10px);
     @include box-shadow(rgba(black, .5) 0 0 1px inset);
     @include no-outline();
-    @include webkit-hardware-accel();
     @include transition-duration($nav-delay);
 
     &:hover {

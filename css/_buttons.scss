@@ -11,7 +11,6 @@ button {
   background-color: $gray;
   border: 0;
   @include border-radius(4px);
-  @include webkit-hardware-accel();
   @include transition-duration($button-delay);
   @include no-outline();
 
