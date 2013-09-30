@@ -61,20 +61,14 @@ header nav.main {
         @include transition-duration($nav-delay);
 
         &:hover {
-          text-shadow: 0 0 2px rgba($main-color, .5);
-          opacity: 0.70;
+          color: $subnav-hover-color;
         }
 
-        &.active {
-          color: lighten($subnav-active-color, 10%);
+        &.active, &.active:hover {
+          color: $subnav-active-color;
           font-family: $font-multicolore;
           background-position: center 35px;
-
-          &:hover {
-            text-shadow: none;
-            opacity: 1.0;
-            cursor: default;
-          }
+          cursor: default;
         }
       }
     }
@@ -274,11 +268,11 @@ header .statusbar .status-search {
       @include transition-duration($default-delay);
       @include no-outline();
 
-      &:focus {
+      //&:focus {
         //color: white;
-        background-color: rgba(white, .2);
+        //background-color: rgba(white, .2);
         //box-shadow: inset 0 0 3px 0 rgba(white, .25);
-      }
+      //}
     }
 
     button {
@@ -339,7 +333,6 @@ footer .social ul {
     a {
       @extend .ir;
       @include no-outline();
-      @include transition-duration($nav-delay);
       float: left;
       height: 35px;
       width: 35px;
@@ -360,7 +353,6 @@ footer .social ul {
       &:hover {
         border-radius: 16px;
         box-shadow: 0 0 5px 3px rgba(white, .5);
-        opacity: 0.75;
       }
     }
   }
@@ -387,7 +379,7 @@ footer .invite {
     @include transition-duration($nav-delay);
 
     &:hover {
-      opacity: 0.5;
+      background-color: lighten($aqua, 80%);
     }
 
     &:focus {

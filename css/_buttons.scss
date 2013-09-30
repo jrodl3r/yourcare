@@ -16,28 +16,30 @@ button {
 
   &:hover {
     color: lighten($light-gray, 15%);
-    background-color: lighten($gray, 3%);
+    text-shadow: 0 0 5px darken($gray, 15%), 1;
+    background-color: lighten($gray, 5%);
     @include no-outline();
   }
-  // &:focus {
-  //   background-color: $main-color;
-  // }
   &:active {
     background-color: $gray;
     //box-shadow: inset 0 -1px 1px 0 rgba(black, .2);
   }
-}
 
-button.aqua {
+  &.aqua {
   background-color: $aqua;
 
-  &:hover, &:focus {
-    color: lighten($light-gray, 15%);
-    background-color: lighten($aqua, 3%);
+    &:hover {
+      color: lighten($light-gray, 15%);
+      text-shadow: 0 0 5px darken($aqua, 15%);
+      background-color: lighten($aqua, 5%);
+    }
+    &:active {
+      background-color: $aqua;
+    }
+  }
+  button.blue {
+
   }
 }
 
-// button.blue {
-
-// }
 

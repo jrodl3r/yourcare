@@ -532,17 +532,12 @@ header nav.main ul li a {
   transition-duration: 0.4s;
 }
 header nav.main ul li a:hover {
-  text-shadow: 0 0 2px rgba(53, 189, 178, 0.5);
-  opacity: 0.70;
+  color: #4d6682;
 }
-header nav.main ul li a.active {
-  color: #8cd8fb;
+header nav.main ul li a.active, header nav.main ul li a.active:hover {
+  color: #5ac8fa;
   font-family: Multicolore, Helvetica, Arial, sans-serif;
   background-position: center 35px;
-}
-header nav.main ul li a.active:hover {
-  text-shadow: none;
-  opacity: 1.0;
   cursor: default;
 }
 
@@ -739,9 +734,6 @@ header .statusbar .status-search .searchbox input {
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }
-header .statusbar .status-search .searchbox input:focus {
-  background-color: rgba(255, 255, 255, 0.2);
-}
 header .statusbar .status-search .searchbox button {
   float: right;
   height: 30px;
@@ -791,10 +783,6 @@ footer .social ul li:last-of-type {
 footer .social ul li a {
   outline: none;
   -webkit-tap-highlight-color: transparent;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
   float: left;
   height: 35px;
   width: 35px;
@@ -814,7 +802,6 @@ footer .social ul li a.pinterest {
 footer .social ul li a:hover {
   border-radius: 16px;
   box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.5);
-  opacity: 0.75;
 }
 
 footer .invite input {
@@ -842,7 +829,7 @@ footer .invite input {
   transition-duration: 0.4s;
 }
 footer .invite input:hover {
-  opacity: 0.5;
+  background-color: white;
 }
 footer .invite input:focus {
   color: #00254c;
@@ -872,29 +859,33 @@ button {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  -webkit-transition-duration: 0.1s;
-  -moz-transition-duration: 0.1s;
-  -o-transition-duration: 0.1s;
-  transition-duration: 0.1s;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }
 button:hover {
   color: #f2f2f2;
-  background-color: #abb0b2;
+  text-shadow: 0 0 5px #7b8286, 1;
+  background-color: #b0b5b7;
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }
 button:active {
   background-color: #a3a8ab;
 }
-
 button.aqua {
   background-color: #35bdb2;
 }
-button.aqua:hover, button.aqua:focus {
+button.aqua:hover {
   color: #f2f2f2;
-  background-color: #3ac8bc;
+  text-shadow: 0 0 5px #24817a;
+  background-color: #42cabf;
+}
+button.aqua:active {
+  background-color: #35bdb2;
 }
 
 @font-face {
