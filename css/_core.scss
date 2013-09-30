@@ -63,7 +63,6 @@ header {
 .content {
   overflow: auto;
   padding-bottom: 125px; // (=) footer height
-  //height: 1750px;
 }
 
 footer {
@@ -99,7 +98,10 @@ footer {
 h1, h2, h3 {
   color: $main-color;
   font-family: $font-multicolore;
-  //text-shadow: 0 0 10px rgba(black, 0.45);
+}
+
+h1 {
+  text-shadow: 0 0 5px rgba(black, 0.45);
 }
 
 h2 {

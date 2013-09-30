@@ -420,6 +420,10 @@ h1, h2, h3 {
   font-family: Multicolore, Helvetica, Arial, sans-serif;
 }
 
+h1 {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.45);
+}
+
 h2 {
   color: #007aff;
   text-indent: 15px;
@@ -488,7 +492,6 @@ header a.home {
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }
-
 header nav.main {
   float: right;
   margin-top: 54px;

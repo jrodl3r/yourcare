@@ -13,21 +13,20 @@
 * **READY** Quick-Search slide-out
 * **READY** Setup AngluarJS + SPA (.htaccess config)
 * **READY** Added AngularJS page views + url routes
-* Setup susy grid system
-* **READY** Setup 2x-Retina / SVG graphics
-* Setup modular-panel layout (frosted, etc.)
+* **READY** Setup 2x-Retina / base64-SVG graphics
+* Setup Susy / 960-grid layout system
+* Setup flexible modular panels (frosted, etc.)
 
 ###September 22nd-30th, 2013
-* **READY** Setup base64-SVG logic (faster-loading)
 * Drag-n-Drop modular-panel logic
 * Modal prompt transition system and functionality
 * Messages menu + modal system (avgrund + fb style)
 
 ###Next
-* Explore 'pinning concept' ideas
+* Explore `pinning concept` ideas
 * Setup scalable css gradient background
 * Panel fade load-in (pinterest-style)
 * Statusbar pop-under labels
-
+* Compass: Embed custom fonts
 
 

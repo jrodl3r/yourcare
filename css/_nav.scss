@@ -4,10 +4,11 @@
 // ==========================================================================
 
 // ==========================================================================
-// Header Logo
+// Header Main Menu + Logo
 // ==========================================================================
 
 header {
+
   a.home {
     float: left;
     height: 48px;
@@ -16,59 +17,55 @@ header {
     background: inline_image('../img/logo.svg') no-repeat;
     @include no-outline();
   }
-}
 
-// ==========================================================================
-// Header Main Menu
-// ==========================================================================
-
-header nav.main {
-  float: right;
-  margin-top: 54px;
-  overflow: hidden;
-
-  ul {
-    @include reset-list();
+  nav.main {
     float: right;
+    margin-top: 54px;
+    overflow: hidden;
 
-    li {
-      float: left;
-      height: 43px;
-      width: 130px;
-      overflow: hidden;
+    ul {
+      @include reset-list();
+      float: right;
 
-      &.wide {
-        width: 160px;
+      li {
+        float: left;
+        height: 43px;
+        width: 130px;
+        overflow: hidden;
+
+        &.wide {
+          width: 160px;
+
+          a {
+            width: 160px;
+          }
+        }
 
         a {
-          width: 160px;
-        }
-      }
+          display: inline-block;
+          height: inherit;
+          width: 130px;
+          padding: 0;
+          color: $nav-text-color;
+          font-size: 14px;
+          font-family: $font-gotham;
+          text-transform: uppercase;
+          text-decoration: none;
+          text-align: center;
+          background: inline_image('../img/nav-marker.svg') center 43px no-repeat;
+          @include no-outline();
+          @include transition-duration($nav-delay);
 
-      a {
-        display: inline-block;
-        height: inherit;
-        width: 130px;
-        padding: 0;
-        color: $nav-text-color;
-        font-size: 14px;
-        font-family: $font-gotham;
-        text-transform: uppercase;
-        text-decoration: none;
-        text-align: center;
-        background: inline_image('../img/nav-marker.svg') center 43px no-repeat;
-        @include no-outline();
-        @include transition-duration($nav-delay);
+          &:hover {
+            color: $subnav-hover-color;
+          }
 
-        &:hover {
-          color: $subnav-hover-color;
-        }
-
-        &.active, &.active:hover {
-          color: $subnav-active-color;
-          font-family: $font-multicolore;
-          background-position: center 35px;
-          cursor: default;
+          &.active, &.active:hover {
+            color: $subnav-active-color;
+            font-family: $font-multicolore;
+            background-position: center 35px;
+            cursor: default;
+          }
         }
       }
     }
@@ -229,7 +226,7 @@ header .statusbar {
 }
 
 // ==========================================================================
-// Header Status-Bar: Quick-Search
+// Header Status-Bar - Quick-Search
 // ==========================================================================
 
 header .statusbar .status-search {
