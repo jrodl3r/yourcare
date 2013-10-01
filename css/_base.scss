@@ -8,22 +8,22 @@
 //                                  DEBUG                                  //
 /////////////////////////////////////////////////////////////////////////////
 
-#home,
-#health,
-#goals,
-#calendar,
-#community {
-  display: none;
+#home, #health, #goals, #calendar, #community {
+  // display: none;
 }
-
-/////////////////////////////////////////////////////////////////////////////
 
 
 // ==========================================================================
 // Global Variables
 // ==========================================================================
 
-$page-font              :   Helvetica;
+// Fonts
+$font-default           :   Helvetica, Arial, sans-serif;
+$font-gotham            :   GothamBook, Helvetica, Arial, sans-serif;
+$font-gotham-med        :   GothamMedium, Helvetica, Arial, sans-serif;
+$font-multicolore       :   Multicolore, Helvetica, Arial, sans-serif;
+
+// Colors
 $main-color             :   #35bdb2;
 $active-color           :   #59c7f9;
 $panel-color            :   #d6f5ef;
@@ -42,16 +42,16 @@ $yellow                 :   #ffcb00;
 $gray                   :   #a3a8ab;
 $light-gray             :   #ccc;
 
-$font-gotham            :   GothamBook, Helvetica, Arial, sans-serif;
-$font-gotham-med        :   GothamMedium, Helvetica, Arial, sans-serif;
-$font-multicolore       :   Multicolore, Helvetica, Arial, sans-serif;
-
+// Timers
 $nav-delay              :   .4s;
 $button-delay           :   .2s;
 $default-delay          :   .6s;
 
-$panel-width            :   30%;
-$panel-gutter           :   5%;
+// Grid
+$total-columns          :   12;
+$column-width           :   5em;
+$gutter-width           :   1em;
+$grid-padding           :   $gutter-width;
 
 // ==========================================================================
 // Core Layout + Navigation Defaults
@@ -77,8 +77,8 @@ header {
 }
 
 .content {
-  overflow: auto;
   padding-bottom: 125px; // (=) footer height
+  overflow: auto;
 }
 
 footer {
@@ -111,10 +111,14 @@ footer {
 // ==========================================================================
 
 .content .inner {
-  min-width: 920px;
-  padding: 70px 20px 50px;
+  width: 80% !important;
+  padding-top: 70px;
+  padding-bottom: 50px;
+  @include container;
+  @include susy-grid-background;
 
   .area {
+    font-family: $font-default;
 
     .panel {
       float: left;
@@ -130,42 +134,42 @@ footer {
 
     .left-content,
     .right-column {
-      float: left;
-      padding-bottom: 40px;
+      // float: left;
+      // padding-bottom: 40px;
     }
 
     .left-content {
-      width: ($panel-width * 2) + $panel-gutter;
-      margin-right: $panel-gutter;
+      // width: ($panel-width * 2) + $panel-gutter;
+      // margin-right: $panel-gutter;
 
-      .panel {
-          width: 46%;
-          height: 250px;
+      // .panel {
+      //     width: 46%;
+      //     height: 250px;
 
-        &.left {
-          margin-right: 8%;
-        }
-        &.full {
-          height: 350px;
-          width: 100%;
+      //   &.left {
+      //     margin-right: 8%;
+      //   }
+      //   &.full {
+      //     height: 350px;
+      //     width: 100%;
 
-          h3 {
-            text-align: left;
-            text-indent: 35px;
-          }
-        }
-      }
+      //     h3 {
+      //       text-align: left;
+      //       text-indent: 35px;
+      //     }
+      //   }
+      // }
     }
 
     .right-column {
-      width: $panel-width;
+      // width: $panel-width;
 
-      .panel {
-        width: 100%;
-        height: 400px;
-        background: rgba(white, .2);
-        border-radius: 5px;
-      }
+      // .panel {
+      //   width: 100%;
+      //   height: 400px;
+      //   background: rgba(white, .2);
+      //   border-radius: 5px;
+      // }
     }
   }
 }

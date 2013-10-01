@@ -5,6 +5,7 @@
 header {
 
   a.home {
+    @extend .ir;
     float: left;
     height: 48px;
     width: 322px;
@@ -148,7 +149,6 @@ header .statusbar {
 
   ul {
     @include reset-list();
-    float: left;
     height: inherit;
 
     li {
@@ -243,7 +243,6 @@ header .statusbar .status-search {
     margin: 3px 0 0 40px;
     border-radius: 18px;
     border: 3px solid rgba(white, .3);
-    //box-shadow: 0 0 6px 1px rgba(white, .15);
 
     input {
       float: left;
@@ -259,12 +258,6 @@ header .statusbar .status-search {
       @include transition-property(all);
       @include transition-duration($default-delay);
       @include no-outline();
-
-      //&:focus {
-        //color: white;
-        //background-color: rgba(white, .2);
-        //box-shadow: inset 0 0 3px 0 rgba(white, .25);
-      //}
     }
 
     button {
@@ -324,10 +317,10 @@ footer .social ul {
 
     a {
       @extend .ir;
-      @include no-outline();
       float: left;
       height: 35px;
       width: 35px;
+      @include no-outline();
 
       &.facebook {
         background: inline_image('../img/social-facebook.svg') no-repeat;

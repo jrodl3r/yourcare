@@ -6,8 +6,8 @@
   font-family: GothamMedium;
   src: url('fonts/Gotham-Medium.otf') format('opentype');
 }
-
 @font-face {
   font-family: Multicolore;
   src: url('fonts/Multicolore.otf') format('opentype');
 }
+//@include font-face('GothamBook', inline-font-files('Gotham-Book.otf', opentype));

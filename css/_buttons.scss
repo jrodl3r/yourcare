@@ -1,6 +1,8 @@
 // ==========================================================================
 // Buttons
 // ==========================================================================
+// TODO: Create Button Mixin
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 button {
   padding: 0;
@@ -16,7 +18,7 @@ button {
 
   &:hover {
     color: lighten($light-gray, 15%);
-    text-shadow: 0 0 5px darken($gray, 15%), 1;
+    text-shadow: 0 0 5px darken($gray, 15%);
     background-color: lighten($gray, 5%);
     @include no-outline();
   }

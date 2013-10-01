@@ -14,7 +14,7 @@
 * **READY** Setup AngluarJS + SPA (.htaccess config)
 * **READY** Added AngularJS page views + url routes
 * **READY** Setup 2x-Retina / base64-SVG graphics
-* Setup Susy / 960-grid layout system
+* **READY** Setup Susy / 960-grid layout system
 * Setup flexible modular panels (frosted, etc.)
 
 ###September 22nd-30th, 2013
@@ -28,5 +28,6 @@
 * Panel fade load-in (pinterest-style)
 * Statusbar pop-under labels
 * Compass: Embed custom fonts
+* Sass: Append all bg-img`s to end/_ir.scss
 
 
