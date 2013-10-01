@@ -364,6 +364,14 @@ textarea {
   *zoom: 1;
 }
 
+#home,
+#health,
+#goals,
+#calendar,
+#community {
+  display: none;
+}
+
 html, body {
   height: 100%;
 }
@@ -415,29 +423,9 @@ footer {
   float: right;
 }
 
-h1, h2, h3 {
-  color: #35bdb2;
-  font-family: Multicolore, Helvetica, Arial, sans-serif;
-}
-
-h1 {
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.45);
-}
-
-h2 {
-  color: #007aff;
-  text-indent: 15px;
-}
-h2.red {
-  color: #d91c5c;
-}
-
 .content .inner {
   min-width: 920px;
   padding: 70px 20px 50px;
-}
-.content .inner .area#home, .content .inner .area#health, .content .inner .area#goals, .content .inner .area#calendar, .content .inner .area#community {
-  display: none;
 }
 .content .inner .area .panel {
   float: left;
@@ -481,6 +469,23 @@ h2.red {
   height: 400px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
+}
+
+h1, h2, h3 {
+  color: #35bdb2;
+  font-family: Multicolore, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.45);
+}
+
+h2 {
+  color: #007aff;
+  text-indent: 15px;
+}
+h2.red {
+  color: #d91c5c;
 }
 
 header a.home {

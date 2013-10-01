@@ -33,14 +33,17 @@
 // Styles
 @import 'core';
 
-// Styles
+// Menus
 @import 'nav';
 
-// Styles
+// Buttons
 @import 'buttons';
 
 // Fonts
 @import 'fonts';
+
+// Modals
+@import 'modals';
 
 /* H5BP-Media */
 @include h5bp-media;

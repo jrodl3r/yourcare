@@ -1,10 +1,26 @@
 //
-// Core Stylesheet
+// YourCare : Core Stylesheet
 //
 // ==========================================================================
 
+
+/////////////////////////////////////////////////////////////////////////////
+//                                  DEBUG                                  //
+/////////////////////////////////////////////////////////////////////////////
+
+#home,
+#health,
+#goals,
+#calendar,
+#community {
+  display: none;
+}
+
+/////////////////////////////////////////////////////////////////////////////
+
+
 // ==========================================================================
-// Variables
+// Global Variables
 // ==========================================================================
 
 $page-font              :   Helvetica;
@@ -38,7 +54,7 @@ $panel-width            :   30%;
 $panel-gutter           :   5%;
 
 // ==========================================================================
-// Layout + Navigation Defaults
+// Core Layout + Navigation Defaults
 // ==========================================================================
 
 html, body {
@@ -90,42 +106,15 @@ footer {
   float: right;
 }
 
-
 // ==========================================================================
-// Content
+// Modular-Panel Layout
 // ==========================================================================
-
-h1, h2, h3 {
-  color: $main-color;
-  font-family: $font-multicolore;
-}
-
-h1 {
-  text-shadow: 0 0 5px rgba(black, 0.45);
-}
-
-h2 {
-  color: $blue;
-  text-indent: 15px;
-
-  &.red {
-    color: $red;
-  }
-}
 
 .content .inner {
   min-width: 920px;
   padding: 70px 20px 50px;
 
   .area {
-
-    &#home,
-    &#health,
-    &#goals,
-    &#calendar,
-    &#community {
-      display: none;
-    }
 
     .panel {
       float: left;
@@ -178,5 +167,27 @@ h2 {
         border-radius: 5px;
       }
     }
+  }
+}
+
+// ==========================================================================
+// Contextual Defaults
+// ==========================================================================
+
+h1, h2, h3 {
+  color: $main-color;
+  font-family: $font-multicolore;
+}
+
+h1 {
+  text-shadow: 0 0 5px rgba(black, 0.45);
+}
+
+h2 {
+  color: $blue;
+  text-indent: 15px;
+
+  &.red {
+    color: $red;
   }
 }
