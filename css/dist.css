@@ -604,7 +604,6 @@ header .submenu ul li a:hover {
   background-image: -o-linear-gradient(bottom, #e4e4e4, #f4f4f4);
   background-image: linear-gradient(bottom, #e4e4e4, #f4f4f4);
   border-right: none;
-  border-left: 0 !important;
 }
 header .submenu ul li a.active, header .submenu ul li a.active:hover {
   color: white;
@@ -973,4 +972,4 @@ button.aqua:active {
   }
 }
 
-/*@ sourceMappingURL=base.css.map */
+/*@ sourceMappingURL=dist.css.map */

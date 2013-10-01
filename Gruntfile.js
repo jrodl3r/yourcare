@@ -16,7 +16,7 @@ module.exports = function(grunt){
 					sourcemap: true
 				},
 				files: {
-					'css/base.css': 'css/base.scss'
+					'css/dist.css': 'css/core.scss'
 				}
 			},
 			dist: {
@@ -26,7 +26,7 @@ module.exports = function(grunt){
 					sourcemap: false
 				},
 				files: {
-					'css/dist.min.css': 'css/base.scss'
+					'css/dist.min.css': 'css/core.scss'
 				}
 			}
 		},
@@ -96,7 +96,7 @@ module.exports = function(grunt){
 			dist: {
 				options: {
 					removeComments: true,
-					collapseWhitespace: false
+					collapseWhitespace: true
 				},
 				files: {
 					'index.html': 'index.html'
@@ -185,7 +185,7 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-notify');
 	grunt.loadNpmTasks('grunt-env');
 
-	grunt.registerTask('default', ['clean:html', 'env:dev', 'sass:dev', 'jshint', 'preprocess', 'htmlmin', 'notify:dev']);
+	grunt.registerTask('default', ['clean:html', 'env:dev', 'sass:dev', 'jshint', 'preprocess', 'notify:dev']);
 	grunt.registerTask('dist-css', ['sass:dist', 'notify:sass']);
 	grunt.registerTask('dist-js', ['clean:js', 'jshint', 'uglify', 'notify:js']);
 	grunt.registerTask('dist', ['env:dist', 'clean', 'sass:dist', 'jshint', 'uglify', 'concat', 'preprocess', 'htmlmin', 'notify:dist']);
