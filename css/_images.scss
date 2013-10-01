@@ -1,0 +1,66 @@
+// ==========================================================================
+// Background-Image Data URI's
+// ==========================================================================
+
+// Content
+
+.wrap {
+  background: inline_image('../img/page-bg.png') no-repeat;
+  background-size: cover;
+}
+
+// Header
+
+header {
+
+  a.home {
+    background: inline_image('../img/logo.svg') no-repeat;
+  }
+
+  nav.main ul a {
+    background: inline_image('../img/nav-marker.svg') center 43px no-repeat;
+  }
+}
+
+header .statusbar a {
+
+  &.messages {
+    background: inline_image('../img/messages.svg') no-repeat;
+  }
+  &.alerts {
+    background: inline_image('../img/alerts.svg') no-repeat;
+  }
+  &.profile {
+    background: inline_image('../img/profile.svg') no-repeat;
+  }
+  &.share {
+    background: inline_image('../img/share.svg') no-repeat;
+  }
+  &.settings {
+    background: inline_image('../img/settings.svg') no-repeat;
+  }
+  &.search {
+    background: inline_image('../img/search.svg') no-repeat;
+  }
+}
+
+// Footer
+
+footer {
+
+  .social ul a {
+
+    &.facebook {
+      background: inline_image('../img/social-facebook.svg') no-repeat;
+    }
+    &.twiiter {
+      background: inline_image('../img/social-twitter.svg') no-repeat;
+    }
+    &.google {
+      background: inline_image('../img/social-google.svg') no-repeat;
+    }
+    &.pinterest {
+      background: inline_image('../img/social-pinterest.svg') no-repeat;
+    }
+  }
+}

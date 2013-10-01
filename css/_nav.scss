@@ -3,6 +3,9 @@
 // ==========================================================================
 
 header {
+  background-color: white;
+  border-bottom: 3px solid $main-color;
+  @include box-shadow(rgba(black, .15) 0 2px 2px);
 
   a.home {
     @extend .ir;
@@ -10,7 +13,6 @@ header {
     height: 48px;
     width: 322px;
     margin: 24px 0 0;
-    background: inline_image('../img/logo.svg') no-repeat;
     @include no-outline();
   }
 
@@ -48,7 +50,6 @@ header {
           text-transform: uppercase;
           text-decoration: none;
           text-align: center;
-          background: inline_image('../img/nav-marker.svg') center 43px no-repeat;
           @include no-outline();
           @include transition-duration($nav-delay);
 
@@ -166,31 +167,25 @@ header .statusbar {
 
         &.messages {
           width: 36px;
-          background: inline_image('../img/messages.svg') no-repeat;
         }
         &.alerts {
           height: 30px;
           width: 30px;
-          background: inline_image('../img/alerts.svg') no-repeat;
         }
         &.profile {
           width: 30px;
-          background: inline_image('../img/profile.svg') no-repeat;
         }
         &.share {
           height: 32px;
           width: 32px;
           margin-top: 5px;
-          background: inline_image('../img/share.svg') no-repeat;
         }
         &.settings {
           width: 28px;
           margin-top: 7px;
-          background: inline_image('../img/settings.svg') no-repeat;
         }
         &.search {
           width: 29px;
-          background: inline_image('../img/search.svg') no-repeat;
 
           &.inactive {
             margin-left: 10px;
@@ -275,9 +270,13 @@ header .statusbar .status-search {
 // Footer
 // ==========================================================================
 
-footer .inner {
-  height: inherit;
-  text-align: center;
+footer {
+  background-color: $panel-color;
+
+  .inner {
+    height: inherit;
+    text-align: center;
+  }
 }
 
 // ==========================================================================
@@ -321,19 +320,6 @@ footer .social ul {
       height: 35px;
       width: 35px;
       @include no-outline();
-
-      &.facebook {
-        background: inline_image('../img/social-facebook.svg') no-repeat;
-      }
-      &.twiiter {
-        background: inline_image('../img/social-twitter.svg') no-repeat;
-      }
-      &.google {
-        background: inline_image('../img/social-google.svg') no-repeat;
-      }
-      &.pinterest {
-        background: inline_image('../img/social-pinterest.svg') no-repeat;
-      }
 
       &:hover {
         border-radius: 16px;
