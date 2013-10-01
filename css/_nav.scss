@@ -52,7 +52,7 @@ header {
           @include transition-duration($nav-delay);
 
           &:hover {
-            color: $subnav-hover-color;
+            color: lighten($subnav-hover-color, 15%);
           }
 
           &.active, &.active:hover {
@@ -111,7 +111,7 @@ header .submenu {
         border-right: 1px solid lighten($subnav-color, 25%);
 
         &:hover {
-          color: $subnav-active-color;
+          color: lighten($subnav-hover-color, 10%);
           text-shadow: 0 0 2px rgba($main-color, .2);
           @include background-image( linear-gradient(bottom, lighten($subnav-bg, 5%), #f4f4f4) );
           border-right: none;

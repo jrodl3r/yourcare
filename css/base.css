@@ -540,7 +540,7 @@ header nav.main ul li a {
   transition-duration: 0.4s;
 }
 header nav.main ul li a:hover {
-  color: #4d6682;
+  color: #718cab;
 }
 header nav.main ul li a.active, header nav.main ul li a.active:hover {
   color: #5ac8fa;
@@ -596,7 +596,7 @@ header .submenu ul li a {
   border-right: 1px solid #cfcfd1;
 }
 header .submenu ul li a:hover {
-  color: #5ac8fa;
+  color: #617fa1;
   text-shadow: 0 0 2px rgba(53, 189, 178, 0.2);
   background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #e4e4e4), color-stop(100%, #f4f4f4));
   background-image: -webkit-linear-gradient(bottom, #e4e4e4, #f4f4f4);
@@ -604,6 +604,7 @@ header .submenu ul li a:hover {
   background-image: -o-linear-gradient(bottom, #e4e4e4, #f4f4f4);
   background-image: linear-gradient(bottom, #e4e4e4, #f4f4f4);
   border-right: none;
+  border-left: 0 !important;
 }
 header .submenu ul li a.active, header .submenu ul li a.active:hover {
   color: white;
