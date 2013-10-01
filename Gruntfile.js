@@ -93,6 +93,15 @@ module.exports = function(grunt){
 		},
 
 		htmlmin: {
+			dev: {
+				options: {
+					removeComments: false,
+					collapseWhitespace: false
+				},
+				files: {
+					'index.html': 'index.html'
+				}
+			},
 			dist: {
 				options: {
 					removeComments: true,
@@ -185,9 +194,9 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-notify');
 	grunt.loadNpmTasks('grunt-env');
 
-	grunt.registerTask('default', ['clean:html', 'env:dev', 'sass:dev', 'jshint', 'preprocess', 'notify:dev']);
+	grunt.registerTask('default', ['clean:html', 'env:dev', 'sass:dev', 'jshint', 'preprocess', 'htmlmin:dev', 'notify:dev']);
 	grunt.registerTask('dist-css', ['sass:dist', 'notify:sass']);
 	grunt.registerTask('dist-js', ['clean:js', 'jshint', 'uglify', 'notify:js']);
-	grunt.registerTask('dist', ['env:dist', 'clean', 'sass:dist', 'jshint', 'uglify', 'concat', 'preprocess', 'htmlmin', 'notify:dist']);
+	grunt.registerTask('dist', ['env:dist', 'clean', 'sass:dist', 'jshint', 'uglify', 'concat', 'preprocess', 'htmlmin:dist', 'notify:dist']);
 	grunt.task.run('notify_hooks');
 };
