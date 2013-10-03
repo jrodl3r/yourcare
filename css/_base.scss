@@ -78,7 +78,7 @@ header {
   @include box-shadow(rgba(black, .15) 0 2px 2px);
 }
 
-.content {
+#content {
   padding-bottom: 125px; // (=) footer height
   overflow: auto;
 }
@@ -112,66 +112,60 @@ footer {
 // Modular-Panel Layout
 // ==========================================================================
 
-.content .inner {
-  width: 80% !important;
-  padding-top: 70px;
-  padding-bottom: 50px;
+#content > .inner.area {
+  padding: 70px 0 50px 0 !important;
+  font-family: $font-default;
   @include container;
-  @include susy-grid-background;
+  // @include susy-grid-background;
 
-  .area {
-    font-family: $font-default;
+
+  .panel {
+    float: left;
+    margin-bottom: 1em;
+    padding: 10px 0;
+    background-color: white;
+    border-radius: 5px;
+
+    h3 {
+      font-size: 21px;
+      text-align: center;
+    }
+  }
+
+  // .left-content, .right-column {
+  //   // padding-bottom: 40px;
+  // }
+
+  .left-content {
+
+    @include span-columns(8,12);
 
     .panel {
-      float: left;
-      margin-bottom: 40px;
-      padding: 10px 0;
-      background-color: white;
+      height: 250px;
+      @include span-columns(3 omega, 6);
 
-      h3 {
-        font-size: 21px;
-        text-align: center;
+      &.left {
+        @include span-columns(3, 6);
+      }
+      &.full {
+        height: 350px;
+        width: 100%;
+
+        h3 {
+          text-align: left;
+          text-indent: 35px;
+        }
       }
     }
+  }
 
-    .left-content,
-    .right-column {
-      // float: left;
-      // padding-bottom: 40px;
-    }
+  .right-column {
+    @include span-columns(4 omega, 12);
 
-    .left-content {
-      // width: ($panel-width * 2) + $panel-gutter;
-      // margin-right: $panel-gutter;
-
-      // .panel {
-      //     width: 46%;
-      //     height: 250px;
-
-      //   &.left {
-      //     margin-right: 8%;
-      //   }
-      //   &.full {
-      //     height: 350px;
-      //     width: 100%;
-
-      //     h3 {
-      //       text-align: left;
-      //       text-indent: 35px;
-      //     }
-      //   }
-      // }
-    }
-
-    .right-column {
-      // width: $panel-width;
-
-      // .panel {
-      //   width: 100%;
-      //   height: 400px;
-      //   background: rgba(white, .2);
-      //   border-radius: 5px;
-      // }
+    .panel {
+      height: 400px;
+      width: 100%;
+      background: rgba(white, .2);
     }
   }
 }
@@ -189,9 +183,8 @@ h1 {
   text-shadow: 0 0 5px rgba(black, 0.45);
 }
 
-h2 {
+h3 {
   color: $blue;
-  text-indent: 15px;
 
   &.red {
     color: $red;

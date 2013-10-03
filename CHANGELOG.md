@@ -15,7 +15,7 @@
 * **READY** Added AngularJS page views + url routes
 * **READY** Setup 2x-Retina / base64-SVG graphics
 * **READY** Setup Susy / 960-grid layout system
-* Setup flexible modular panels (frosted, etc.)
+* !!!!!!!!! Setup modular panels (frosted, etc.)
 
 ###September 22nd-30th, 2013
 * Drag-n-Drop modular-panel logic
@@ -27,7 +27,5 @@
 * Setup scalable css gradient background
 * Panel fade load-in (pinterest-style)
 * Statusbar pop-under labels
-* Compass: Embed custom fonts
-* Sass: Append all bg-img`s to end/_ir.scss
-
+* **READY** Append bg-img`s to _images.scss
 

@@ -1,19 +1,14 @@
 // ==========================================================================
-// YourCare Core Module
+// YourCare Core
 // ==========================================================================
 
 var YC = {
-
   init : function () {
-
    // this.App.init();
     this.Nav.init();
   }
 };
 
-
 $(document).ready( function () {
-
   YC.init();
-
 });
