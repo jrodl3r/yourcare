@@ -3,16 +3,6 @@
 //
 // ==========================================================================
 
-
-/////////////////////////////////////////////////////////////////////////////
-//                                  DEBUG                                  //
-/////////////////////////////////////////////////////////////////////////////
-
-#home, #health, #goals, #calendar, #community {
-  // display: none;
-}
-
-
 // ==========================================================================
 // Global Variables
 // ==========================================================================
@@ -109,68 +99,6 @@ footer {
 }
 
 // ==========================================================================
-// Modular-Panel Layout
-// ==========================================================================
-
-#content > .inner.area {
-  padding: 70px 0 50px 0 !important;
-  font-family: $font-default;
-  @include container;
-  // @include susy-grid-background;
-
-
-  .panel {
-    float: left;
-    margin-bottom: 1em;
-    padding: 10px 0;
-    background-color: white;
-    border-radius: 5px;
-
-    h3 {
-      font-size: 21px;
-      text-align: center;
-    }
-  }
-
-  // .left-content, .right-column {
-  //   // padding-bottom: 40px;
-  // }
-
-  .left-content {
-
-    @include span-columns(8,12);
-
-    .panel {
-      height: 250px;
-      @include span-columns(3 omega, 6);
-
-      &.left {
-        @include span-columns(3, 6);
-      }
-      &.full {
-        height: 350px;
-        width: 100%;
-
-        h3 {
-          text-align: left;
-          text-indent: 35px;
-        }
-      }
-    }
-  }
-
-  .right-column {
-    @include span-columns(4 omega, 12);
-
-    .panel {
-      height: 400px;
-      width: 100%;
-      background: rgba(white, .2);
-    }
-  }
-}
-
-// ==========================================================================
 // Contextual Defaults
 // ==========================================================================
 
@@ -188,5 +116,78 @@ h3 {
 
   &.red {
     color: $red;
+  }
+}
+
+// ==========================================================================
+// Modular-Panel Layout
+// ==========================================================================
+
+#content .inner {
+  padding: 40px 0 50px 0 !important;
+
+  .area {
+    font-family: $font-default;
+    @include container;
+    // @include susy-grid-background;
+
+    &#health, &#goals, &#calendar, &#community {
+      padding-top: 36px;
+    }
+
+    .panel {
+      float: left;
+      margin-bottom: $grid-padding;
+      padding: 10px 0;
+      background-color: white;
+      border-radius: 10px;
+
+      h3 {
+        font-size: 21px;
+        text-align: center;
+      }
+    }
+
+    // .left-content, .right-column {
+    //   // padding-bottom: 40px;
+    // }
+
+    .left-content {
+
+      @include span-columns(8,12);
+
+      .panel {
+        height: 250px;
+
+        &.left {
+          @include span-columns(4, 8);
+        }
+        &.right {
+          @include span-columns(4 omega, 8);
+        }
+        &.last {
+          margin-bottom: 0;
+        }
+        &.full {
+          height: 350px;
+          width: 100%;
+
+          h3 {
+            text-align: left;
+            text-indent: 35px;
+          }
+        }
+      }
+    }
+
+    .right-column {
+      @include span-columns(4 omega, 12);
+
+      .panel {
+        height: 400px;
+        width: 100%;
+        background: rgba(white, .2);
+      }
+    }
   }
 }

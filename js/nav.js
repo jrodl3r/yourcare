@@ -3,6 +3,12 @@
 // YourCare Core Module
 // ==========================================================================
 
+// YC.Page = {
+
+//   content_area          :   $('#content > .inner')
+
+// };
+
 YC.Nav = {
 
   sub_nav               :   $('header .submenu'),
@@ -62,13 +68,7 @@ YC.Nav = {
       $(this).bind( 'click', function () {
         YC.Nav.clearActiveLinks( YC.Nav.main_nav_links );
         YC.Nav.clearActiveLinks( YC.Nav.status_nav_links );
-        /*$(this).parent().animate({
-          'background-position-y': '34px'
-        });*/
-        YC.Nav.sub_nav.animate({
-          height: 'toggle',
-          opacity: 'toggle'
-        });
+        YC.Nav.sub_nav.addClass( 'active' );
         $(this).addClass( 'active' );
       });
     });
@@ -77,12 +77,9 @@ YC.Nav = {
   // Setup Sub-Nav Menu Clicks/Taps
   setupSubNavLinks : function () {
     this.sub_nav_links.each( function () {
-      $(this).bind( 'click', function () {
-        YC.Nav.sub_nav_links.each( function () {
-          if( $(this).hasClass( 'active' ) ) {
-            $(this).removeClass( 'active' );
-          }
-        });
+      $(this).bind( 'click', function ( a ) {
+        e.preventDefault();
+        YC.Nav.sub_nav_links.removeClass( 'active' );
         $(this).addClass( 'active' );
       });
     });
@@ -98,13 +95,13 @@ YC.Nav = {
       link_set.each( function () {
         if( $(this).hasClass( 'active' ) ) {
           $(this).removeClass( 'active' );
-          $(this).parent().animate({
-            'background-position-y': '43px'
-          });
-          YC.Nav.sub_nav.animate({
-            height: 'toggle',
-            opacity: 'toggle'
-          });
+          ////////////////////////////////////
+          // TODO: Convert to CSS-Animation //
+          $(this).parent().animate({        //
+            'background-position-y': '43px' //
+          });                               //
+          ////////////////////////////////////
+          YC.Nav.sub_nav.removeClass( 'active' );
         }
       });
     } else {
