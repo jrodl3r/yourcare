@@ -514,6 +514,9 @@ header {
   -moz-box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
   box-shadow: rgba(0, 0, 0, 0.15) 0 2px 2px;
 }
+header > .inner {
+  height: 97px;
+}
 header a.home {
   float: left;
   height: 48px;

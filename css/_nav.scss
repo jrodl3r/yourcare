@@ -7,6 +7,10 @@ header {
   border-bottom: 3px solid $main-color;
   @include box-shadow(rgba(black, .15) 0 2px 2px);
 
+  & > .inner {
+    height: 97px;
+  }
+
   a.home {
     @extend .ir;
     float: left;
