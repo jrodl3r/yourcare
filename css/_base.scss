@@ -40,20 +40,20 @@ $nav-delay              :   .4s;
 $button-delay           :   .2s;
 $default-delay          :   .6s;
 
-// Layout
-
-$page-min-width         :   960px;
-$page-pad-width         :   1000px;
-$page-max-width         :   1200px;
-$page-gutter-width      :   20px;
-$footer-height          :   125px;
-
 // Grid
 
 $total-columns          :   12;
 $column-width           :   5em;
 $gutter-width           :   1em;
 $grid-padding           :   $gutter-width;
+
+// Layout
+
+$page-gutter-width      :   20px;
+$page-min-width         :   960px;
+$page-pad-width         :   $page-min-width + ( $page-gutter-width * 2 );
+$page-max-width         :   1200px;
+$footer-height          :   125px;
 
 // ==========================================================================
 // Core Layout + Navigation Defaults
