@@ -18,7 +18,7 @@
   <![endif]-->
 
   <div class="wrap">
-    <header>
+    <header ng-controller="NavController">
       <div class="statusbar">
         <div class="inner">
           <ul class="left"></ul>
@@ -42,20 +42,50 @@
         <a class="home" href="#/home">YourCare</a>
         <nav class="main">
           <ul>
-            <li><a class="health" href="#/health">Your Health</a></li>
-            <li><a class="goals" href="#/goals">Your Goals</a></li>
-            <li class="wide"><a class="calendar" href="#/calendar">Your Calendar</a></li>
-            <li class="wide"><a class="community" href="#/community">Your Community</a></li>
+            <li>
+              <a class="health" href="#/health" ng-class="{active:isActive('/health')}">Your Health</a>
+            </li>
+            <li>
+              <a class="goals" href="#/goals" ng-class="{active:isActive('/goals')}">Your Goals</a>
+            </li>
+            <li class="wide">
+              <a class="calendar" href="#/calendar" ng-class="{active:isActive('/calendar')}">Your Calendar</a>
+            </li>
+            <li class="wide">
+              <a class="community" href="#/community" ng-class="{active:isActive('/community')}">Your Community</a>
+            </li>
           </ul>
         </nav>
       </div>
-      <div class="submenu">
+      <div class="submenu" ng-class="{active:isNotActive('/home')}">
         <div class="inner">
-          <ul>
-            <li><a href="#">Lorem Ipsum</a></li>
-            <li><a href="#">Dolor Amitol</a></li>
-            <li><a href="#">Forimum Tular</a></li>
-            <li><a href="#">Molar Suplio</a></li>
+          <!-- Health -->
+          <ul ng-class="{active:isActive('/health')}">
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Health</a></li>
+          </ul>
+          <!-- Goals -->
+          <ul ng-class="{active:isActive('/goals')}">
+            <li><a href="#">Goals</a></li>
+            <li><a href="#">Goals</a></li>
+            <li><a href="#">Goals</a></li>
+            <li><a href="#">Goals</a></li>
+          </ul>
+          <!-- Calendar -->
+          <ul ng-class="{active:isActive('/calendar')}">
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Calendar</a></li>
+          </ul>
+          <!-- Community -->
+          <ul ng-class="{active:isActive('/community')}">
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Community</a></li>
           </ul>
         </div>
       </div>

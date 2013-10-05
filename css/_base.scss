@@ -8,14 +8,12 @@
 // ==========================================================================
 
 // Fonts
-
 $font-default           :   Helvetica, Arial, sans-serif;
 $font-gotham            :   GothamBook, Helvetica, Arial, sans-serif;
 $font-gotham-med        :   GothamMedium, Helvetica, Arial, sans-serif;
 $font-multicolore       :   Multicolore, Helvetica, Arial, sans-serif;
 
 // Colors
-
 $main-color             :   #35bdb2;
 $active-color           :   #59c7f9;
 $panel-color            :   #d6f5ef;
@@ -35,20 +33,17 @@ $gray                   :   #a3a8ab;
 $light-gray             :   #ccc;
 
 // Timers
-
 $nav-delay              :   .4s;
 $button-delay           :   .2s;
 $default-delay          :   .6s;
 
 // Grid
-
 $total-columns          :   12;
 $column-width           :   5em;
 $gutter-width           :   1em;
 $grid-padding           :   $gutter-width;
 
 // Layout
-
 $page-gutter-width      :   20px;
 $page-min-width         :   960px;
 $page-pad-width         :   $page-min-width + ( $page-gutter-width * 2 );

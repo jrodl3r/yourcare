@@ -614,9 +614,13 @@ header .submenu ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: none;
   float: left;
   height: inherit;
   width: 100%;
+}
+header .submenu ul.active {
+  display: block;
 }
 header .submenu ul li {
   float: left;

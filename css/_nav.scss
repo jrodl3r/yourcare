@@ -104,9 +104,14 @@ header .submenu {
 
   ul {
     @include reset-list();
+    display: none;
     float: left;
     height: inherit;
     width: 100%;
+
+    &.active {
+     display: block;
+    }
 
     li {
       float: left;

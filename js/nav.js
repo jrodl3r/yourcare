@@ -95,7 +95,7 @@ YC.Nav = {
       link_set.removeClass( 'active' );
       YC.Nav.sub_nav.removeClass( 'active' );
     } else if ( YC.Debug ) {
-      console.error('YC.Nav.clearActiveLinks() : Fall-Through Error (Failed)');
+      console.error('nav.js : YC.Nav.clearActiveLinks() - Fail');
     }
   },
 
