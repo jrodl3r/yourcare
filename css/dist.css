@@ -370,7 +370,7 @@ html, body {
 
 .wrap {
   min-height: 100%;
-  min-width: 960px;
+  min-width: 1000px;
   cursor: default;
 }
 
@@ -390,7 +390,7 @@ header {
 
 footer {
   position: relative;
-  min-width: 960px;
+  min-width: 1000px;
   margin-top: -125px;
   height: 125px;
   clear: both;
@@ -400,17 +400,10 @@ footer {
 .inner {
   display: block;
   width: 80%;
-  min-width: 920px;
+  min-width: 960px;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
+  padding: 0 20px;
 }
 
 h1, h2, h3 {
@@ -429,11 +422,22 @@ h3.red {
   color: #d91c5c;
 }
 
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
 #content .inner {
-  padding: 40px 0 50px 0 !important;
+  padding: 40px 0 50px;
 }
 #content .inner .area {
-  font-family: Helvetica, Arial, sans-serif;
   *zoom: 1;
   max-width: 71em;
   _width: 71em;
@@ -441,6 +445,9 @@ h3.red {
   padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  font-family: Helvetica, Arial, sans-serif;
 }
 #content .inner .area:after {
   content: "";
@@ -585,7 +592,7 @@ header .submenu {
   float: left;
   height: 0;
   width: 100%;
-  min-width: 960px;
+  min-width: 1000px;
   background: #e4e4e4;
   border-bottom: 1px solid #a8a8ac;
   -webkit-transition-duration: 0.4s;
@@ -631,8 +638,7 @@ header .submenu ul li a:hover {
   color: #617fa1;
 }
 header .submenu ul li a.active, header .submenu ul li a.active:hover {
-  color: #5ac8fa;
-  font-family: GothamMedium, Helvetica, Arial, sans-serif;
+  color: #8199b4;
   cursor: default;
 }
 

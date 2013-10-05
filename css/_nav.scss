@@ -86,7 +86,7 @@ header .submenu {
   float: left;
   height: 0;
   width: 100%;
-  min-width: 960px;
+  min-width: $page-pad-width;
   background: lighten($subnav-bg, 5%);
   border-bottom: 1px solid lighten($subnav-color, 10%);
   // @include box-shadow(rgba(black, 0.15) 0 0 3px 1px);
@@ -133,9 +133,10 @@ header .submenu {
         }
 
         &.active, &.active:hover {
+          color: lighten($subnav-hover-color, 20%);
           //color: white;
-          color: $subnav-active-color;
-          font-family: $font-gotham-med;
+          //color: $subnav-active-color;
+          //font-family: $font-gotham-med;
           //background: lighten($subnav-active-color, 5%);
           //text-shadow: 0 0 2px rgba($subnav-active-color, .2);
           cursor: default;

@@ -40,6 +40,14 @@ $nav-delay              :   .4s;
 $button-delay           :   .2s;
 $default-delay          :   .6s;
 
+// Layout
+
+$page-min-width         :   960px;
+$page-pad-width         :   1000px;
+$page-max-width         :   1200px;
+$page-gutter-width      :   20px;
+$footer-height          :   125px;
+
 // Grid
 
 $total-columns          :   12;
@@ -57,7 +65,7 @@ html, body {
 
 .wrap {
   min-height: 100%;
-  min-width: 960px;
+  min-width: $page-pad-width;
   cursor: default;
 }
 
@@ -69,15 +77,15 @@ header {
 }
 
 #content {
-  padding-bottom: 125px; // (=) footer height
+  padding-bottom: $footer-height;
   overflow: auto;
 }
 
 footer {
   position: relative;
-  min-width: 960px;
-  margin-top: -125px; // (-) footer height
-  height: 125px;
+  min-width: $page-pad-width;
+  margin-top: -$footer-height;
+  height: $footer-height;
   clear: both;
   background-color: $panel-color;
 }
@@ -85,17 +93,10 @@ footer {
 .inner {
   display: block;
   width: 80%;
-  min-width: 920px;
-  max-width: 1200px;
+  min-width: $page-min-width;
+  max-width: $page-max-width;
   margin: 0 auto;
-}
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
+  padding: 0 $page-gutter-width;
 }
 
 // ==========================================================================
@@ -119,17 +120,23 @@ h3 {
   }
 }
 
+.left { float: left; }
+.right { float: right; }
+.clear { clear: both; }
+
 // ==========================================================================
 // Modular-Panel Layout
 // ==========================================================================
 
 #content .inner {
-  padding: 40px 0 50px 0 !important;
+  padding: 40px 0 50px;
 
   .area {
-    font-family: $font-default;
     @include container;
     // @include susy-grid-background;
+    padding-left: 0;
+    padding-right: 0;
+    font-family: $font-default;
 
     &#health, &#goals, &#calendar, &#community {
       padding-top: 36px;

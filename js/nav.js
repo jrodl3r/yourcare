@@ -3,10 +3,10 @@
 // YourCare Core Module
 // ==========================================================================
 
+YC.Debug = true;
+
 // YC.Page = {
-
 //   content_area          :   $('#content > .inner')
-
 // };
 
 YC.Nav = {
@@ -77,7 +77,7 @@ YC.Nav = {
   // Setup Sub-Nav Menu Clicks/Taps
   setupSubNavLinks : function () {
     this.sub_nav_links.each( function () {
-      $(this).bind( 'click', function ( a ) {
+      $(this).bind( 'click', function (e) {
         e.preventDefault();
         YC.Nav.sub_nav_links.removeClass( 'active' );
         $(this).addClass( 'active' );
@@ -92,19 +92,9 @@ YC.Nav = {
       link_set.removeClass( 'active' );
     // Main Menu Links
     } else if ( link_set === this.main_nav_links ) {
-      link_set.each( function () {
-        if( $(this).hasClass( 'active' ) ) {
-          $(this).removeClass( 'active' );
-          ////////////////////////////////////
-          // TODO: Convert to CSS-Animation //
-          $(this).parent().animate({        //
-            'background-position-y': '43px' //
-          });                               //
-          ////////////////////////////////////
-          YC.Nav.sub_nav.removeClass( 'active' );
-        }
-      });
-    } else {
+      link_set.removeClass( 'active' );
+      YC.Nav.sub_nav.removeClass( 'active' );
+    } else if ( YC.Debug ) {
       console.error('YC.Nav.clearActiveLinks() : Fall-Through Error (Failed)');
     }
   },
@@ -131,7 +121,7 @@ YC.Nav = {
     setTimeout( function () {
       YC.Nav.status_search_box.fadeIn();
       YC.Nav.status_search_flag = true;
-    }, this.nav_timer_delay);
+    }, this.nav_timer_delay );
   },
 
   //
@@ -141,7 +131,7 @@ YC.Nav = {
       YC.Nav.status_search_panel.removeClass( 'active' );
       YC.Nav.status_nav_links.removeClass( 'inactive' );
       YC.Nav.status_search_flag = false;
-    }, this.nav_timer_delay);
+    }, this.nav_timer_delay );
   },
 
   //
@@ -158,7 +148,7 @@ YC.Nav = {
   //
   toggleAutofill : function ( input ) {
     if ( input.val() === '' ) {
-      input.val('Search');
+      input.val( 'Search' );
     } else if ( input.val() === 'Search' ) {
       input.val('');
     }
