@@ -17,12 +17,13 @@
 * **READY** Setup Susy grid layout system
 
 ###Phase 3
+* **READY** Setup AngularJS header-nav logic
+* Setup AngularJS routing animations
 * Setup panel layout + menu templates
-* Setup AngularJS page transitions/animations
-* Unique interior panel-ui components + layout
-* Drag-n-Drop modular-panel logic
-* Modal prompt transition system and functionality
-* Messages menu + modal system (avgrund + fb style)
+* Modal dialog system (avgrund)
+* Drag-n-drop modular panel system
+* Interior panel layout + componentry
+* Messages menu system (fb style)
 
 ###Next
 * Explore pinning-feature options
