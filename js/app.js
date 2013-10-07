@@ -6,44 +6,59 @@
 var YC_App = angular.module('YC_App', ['ngRoute']);
 
 YC_App.config( function( $routeProvider ) {
-
   $routeProvider.when( '/home',
     {
-      templateUrl : 'views/home.html',
-      controller  : 'AppCtrl'
+      // controller  : 'HomeCtrl',
+      templateUrl : 'views/home.html'
     })
   .when( '/health',
     {
-      templateUrl : 'views/health.html',
-      controller  : 'AppCtrl'
+      // controller  : 'HealthCtrl',
+      templateUrl : 'views/health.html'
     })
   .when( '/goals',
     {
-      templateUrl : 'views/goals.html',
-      controller  : 'AppCtrl'
+      // controller  : 'GoalsCtrl',
+      templateUrl : 'views/goals.html'
     })
   .when( '/calendar',
     {
-      templateUrl : 'views/calendar.html',
-      controller  : 'AppCtrl'
+      // controller  : 'CalCtrl',
+      templateUrl : 'views/calendar.html'
     })
   .when( '/community',
     {
-      templateUrl : 'views/community.html',
-      controller  : 'AppCtrl'
+      // controller  : 'ComCtrl',
+      templateUrl : 'views/community.html'
     })
   .otherwise({ redirectTo: '/home' });
 });
 
-YC_App.controller('AppCtrl', function( /* $scope */ ) {
-  // TODO
+YC_App.controller('NavCtrl', function( $scope, $location ) {
+  $scope.isActive = function( route ) {
+    return route === $location.path();
+  };
+  $scope.isNotActive = function( route ) {
+    return route !== $location.path();
+  };
 });
 
-YC_App.controller('NavCtrl', function( $scope, $location ) {
-    $scope.isActive = function( route ) {
-      return route === $location.path();
-    };
-    $scope.isNotActive = function( route ) {
-      return route !== $location.path();
-    };
-});
+// YC_App.controller('HomeCtrl', function( /* $scope */ ) {
+//   // TODO
+// });
+
+// YC_App.controller('HealthCtrl', function( /* $scope */ ) {
+//   // TODO
+// });
+
+// YC_App.controller('GoalsCtrl', function( /* $scope */ ) {
+//   // TODO
+// });
+
+// YC_App.controller('CalCtrl', function( /* $scope */ ) {
+//   // TODO
+// });
+
+// YC_App.controller('ComCtrl', function( /* $scope */ ) {
+//   // TODO
+// });

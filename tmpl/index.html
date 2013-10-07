@@ -93,7 +93,7 @@
       </div>
     </header>
     <div id="content">
-      <div class="inner" ng-view ng-animate="{enter: 'enter-animation', leave: 'leave-animation'}"></div>
+      <div class="inner" ng-view ng-animate="{enter: 'view-enter'}"></div>
     </div>
   </div>
   <footer>
@@ -117,8 +117,8 @@
   <!-- @if NODE_ENV == 'DEV' -->  <script src="/js/vendor/jquery/jquery.js"></script>
   <script src="/js/vendor/angular/angular.js"></script>
   <script src="/js/vendor/angular-route/angular-route.js"></script>
-  <script src="/js/app.js"></script>
   <script src="/js/core.js"></script>
+  <script src="/js/app.js"></script>
   <script src="/js/nav.js"></script>
   <!-- @endif --><!-- @if NODE_ENV == 'DIST' -->
   <script src="/js/dist.min.js"></script>

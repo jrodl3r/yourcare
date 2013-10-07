@@ -34,9 +34,10 @@ module.exports = function(grunt){
 		uglify: {
 			options: {
 				banner: '<%= banner %>',
-				mangle: {
-					except: ['$routeProvider']
-				}
+				mangle: false
+				//mangle: {
+				//except: ['$routeProvider']
+				//}
 			},
 			dist: {
 				src: '<%= jshint.dist.src %>',
@@ -71,7 +72,7 @@ module.exports = function(grunt){
 				options: {
 					ignores: ['js/dist.min.js']
 				},
-				src: ['js/*.js']
+				src: ['js/core.js', 'js/app.js', 'js/nav.js', 'js/plugins.js']
 			}
 		},
 
