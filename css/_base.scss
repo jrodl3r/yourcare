@@ -36,7 +36,7 @@ $light-gray             :   #ccc;
 $nav-delay              :   .4s;
 $button-delay           :   .2s;
 $default-delay          :   .6s;
-$page-delay             :   1s;
+$content-delay          :   1s;
 
 // Grid
 $total-columns          :   12;
@@ -126,6 +126,16 @@ h3 {
 #content .inner {
   padding: 40px 0 50px;
 
+  &.reveal-animation.ng-enter {
+    @include transition-duration($content-delay);
+    margin-top: $page-gutter-width;
+    opacity: 0;
+  }
+  &.reveal-animation.ng-enter.ng-enter-active {
+    margin-top: 0;
+    opacity: 1;
+  }
+
   .area {
     @include container;
     // @include susy-grid-background;
@@ -150,12 +160,7 @@ h3 {
       }
     }
 
-    // .left-content, .right-column {
-    //   // padding-bottom: 40px;
-    // }
-
     .left-content {
-
       @include span-columns(8,12);
 
       .panel {
@@ -192,17 +197,4 @@ h3 {
       }
     }
   }
-}
-
-
-
-
-.reveal-animation.ng-enter {
-  @include transition-duration($page-delay);
-  margin-top: 10px;
-  opacity: 0;
-}
-.reveal-animation.ng-enter.ng-enter-active {
-  margin-top: 0;
-  opacity: 1;
 }
