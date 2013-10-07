@@ -18,7 +18,7 @@
 
 ###Phase 3
 * **READY** Setup AngularJS header-nav logic
-* Setup AngularJS routing animations
+* **READY** Setup AngularJS routing animations
 * Setup panel layout + menu templates
 * Modal dialog system (avgrund)
 * Drag-n-drop modular panel system
