@@ -51,6 +51,9 @@ $page-pad-width         :   $page-min-width + ( $page-gutter-width * 2 );
 $page-max-width         :   1200px;
 $footer-height          :   125px;
 
+// Media-Queries
+$mq-tablet              :   768px;
+
 // ==========================================================================
 // Core Layout + Navigation Defaults
 // ==========================================================================
@@ -128,11 +131,9 @@ h3 {
 
   &.reveal-animation.ng-enter {
     @include transition-duration($content-delay);
-    margin-top: $page-gutter-width;
     opacity: 0;
   }
   &.reveal-animation.ng-enter.ng-enter-active {
-    margin-top: 0;
     opacity: 1;
   }
 

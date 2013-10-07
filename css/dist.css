@@ -441,11 +441,9 @@ h3.red {
   -moz-transition-duration: 1s;
   -o-transition-duration: 1s;
   transition-duration: 1s;
-  margin-top: 20px;
   opacity: 0;
 }
 #content .inner.reveal-animation.ng-enter.ng-enter-active {
-  margin-top: 0;
   opacity: 1;
 }
 #content .inner .area {
