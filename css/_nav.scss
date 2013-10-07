@@ -80,7 +80,6 @@ header {
 header .submenu {
   position: absolute;
   top: 142px;
-  display: block;
   visibility: hidden;
   overflow: hidden;
   float: left;
@@ -89,7 +88,6 @@ header .submenu {
   min-width: $page-pad-width;
   background: lighten($subnav-bg, 5%);
   border-bottom: 1px solid lighten($subnav-color, 10%);
-  // @include box-shadow(rgba(black, 0.15) 0 0 3px 1px);
   @include transition-duration($nav-delay);
 
   &.active {

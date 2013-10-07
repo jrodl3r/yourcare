@@ -595,7 +595,6 @@ header nav.main ul li a.active, header nav.main ul li a.active:hover {
 header .submenu {
   position: absolute;
   top: 142px;
-  display: block;
   visibility: hidden;
   overflow: hidden;
   float: left;
