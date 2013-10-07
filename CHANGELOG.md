@@ -11,7 +11,7 @@
 
 ###Phase 2
 * **READY** Quick-Search slide-out
-* **READY** Setup AngluarJS + SPA (.htaccess config)
+* **READY** Setup AngluarJS + SPA (.htaccess)
 * **READY** Added AngularJS page views + url routes
 * **READY** Setup 2x-Retina / base64-SVG graphics
 * **READY** Setup Susy grid layout system
@@ -24,6 +24,7 @@
 * Drag-n-drop modular panel system
 * Interior panel layout + componentry
 * Messages menu system (fb style)
+* Slow-down nav css-animations (ipads)
 
 ###Next
 * Explore pinning-feature options
