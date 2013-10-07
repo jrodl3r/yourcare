@@ -1,1 +1,122 @@
-<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]--><!--[if IE 8]><html class="no-js lt-ie9"><![endif]--><!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]--><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>YourCare</title><meta name="description" content="YourCare"><meta name="viewport" content="width=device-width, initial-scale=1"><script src="/js/vendor/modernizr-2.6.2.min.js"></script><link rel="stylesheet" href="/css/dist.min.css"></head><body ng-app="YC_App"><!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]--><div class="wrap"><header ng-controller="NavCtrl"><div class="statusbar"><div class="inner"><ul class="left"></ul><ul class="right"><li><a class="messages" href="#">Messages</a></li><li><a class="profile" href="#">Profile</a></li><li><a class="alerts" href="#">Alerts</a></li><li><a class="share" href="#">Share</a></li><li><a class="settings" href="#">Settings</a></li><li class="status-search"><div class="searchbox"><button value="Go">Go</button><input type="text" value="Search"></div></li><li><a class="search" href="#">Search</a></li></ul></div></div><div class="inner"><a class="home" href="#/home">YourCare</a><nav class="main"><ul><li><a class="health" href="#/health" ng-class="{active:isActive('/health')}">Your Health</a></li><li><a class="goals" href="#/goals" ng-class="{active:isActive('/goals')}">Your Goals</a></li><li class="wide"><a class="calendar" href="#/calendar" ng-class="{active:isActive('/calendar')}">Your Calendar</a></li><li class="wide"><a class="community" href="#/community" ng-class="{active:isActive('/community')}">Your Community</a></li></ul></nav></div><div class="submenu" ng-class="{active:isNotActive('/home')}"><div class="inner"><ul ng-class="{active:isActive('/health')}"><li><a href="#">Health</a></li><li><a href="#">Health</a></li><li><a href="#">Health</a></li><li><a href="#">Health</a></li></ul><ul ng-class="{active:isActive('/goals')}"><li><a href="#">Goals</a></li><li><a href="#">Goals</a></li><li><a href="#">Goals</a></li><li><a href="#">Goals</a></li></ul><ul ng-class="{active:isActive('/calendar')}"><li><a href="#">Calendar</a></li><li><a href="#">Calendar</a></li><li><a href="#">Calendar</a></li><li><a href="#">Calendar</a></li></ul><ul ng-class="{active:isActive('/community')}"><li><a href="#">Community</a></li><li><a href="#">Community</a></li><li><a href="#">Community</a></li><li><a href="#">Community</a></li></ul></div></div></header><div id="content"><div class="inner" ng-view="" ng-animate="{enter: 'view-enter'}"></div></div></div><footer><div class="inner"><div class="social"><h4>Get Connected:</h4><ul><li><a class="facebook" href="#">Facebook</a></li><li><a class="twiiter" href="#">Twitter</a></li><li><a class="google" href="#">Google&plus;</a></li><li><a class="pinterest" href="#">Pinterest</a></li></ul></div><div class="invite"><h4>Invite Your Friends:</h4><input type="text" name="invite" value=""><br><button class="aqua">Send Email</button></div></div></footer><script src="/js/dist.min.js"></script></body></html>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>YourCare</title>
+  <meta name="description" content="YourCare">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
+  <link rel="stylesheet" href="/css/dist.css">
+</head>
+<body ng-app="YC_App">
+  <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <div class="wrap">
+    <header ng-controller="NavCtrl">
+      <div class="statusbar">
+        <div class="inner">
+          <ul class="left"></ul>
+          <ul class="right">
+            <li><a class="messages" href="#">Messages</a></li>
+            <li><a class="profile" href="#">Profile</a></li>
+            <li><a class="alerts" href="#">Alerts</a></li>
+            <li><a class="share" href="#">Share</a></li>
+            <li><a class="settings" href="#">Settings</a></li>
+            <li class="status-search">
+              <div class="searchbox">
+                <button value="Go">Go</button>
+                <input type="text" value="Search">
+              </div>
+            </li>
+            <li><a class="search" href="#">Search</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="inner">
+        <a class="home" href="#/home">YourCare</a>
+        <nav class="main">
+          <ul>
+            <li>
+              <a class="health" href="#/health" ng-class="{active:isActive('/health')}">Your Health</a>
+            </li>
+            <li>
+              <a class="goals" href="#/goals" ng-class="{active:isActive('/goals')}">Your Goals</a>
+            </li>
+            <li class="wide">
+              <a class="calendar" href="#/calendar" ng-class="{active:isActive('/calendar')}">Your Calendar</a>
+            </li>
+            <li class="wide">
+              <a class="community" href="#/community" ng-class="{active:isActive('/community')}">Your Community</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="submenu" ng-class="{active:isNotActive('/home')}">
+        <div class="inner">
+          <!-- Health -->
+          <ul ng-class="{active:isActive('/health')}">
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Health</a></li>
+          </ul>
+          <!-- Goals -->
+          <ul ng-class="{active:isActive('/goals')}">
+            <li><a href="#">Goals</a></li>
+            <li><a href="#">Goals</a></li>
+            <li><a href="#">Goals</a></li>
+            <li><a href="#">Goals</a></li>
+          </ul>
+          <!-- Calendar -->
+          <ul ng-class="{active:isActive('/calendar')}">
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Calendar</a></li>
+          </ul>
+          <!-- Community -->
+          <ul ng-class="{active:isActive('/community')}">
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Community</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div id="content" ng-controller="AppCtrl">
+      <div class="inner reveal-animation" ng-view></div>
+    </div>
+  </div>
+  <footer>
+    <div class="inner">
+      <div class="social">
+        <h4>Get Connected:</h4>
+        <ul>
+          <li><a class="facebook" href="#">Facebook</a></li>
+          <li><a class="twiiter" href="#">Twitter</a></li>
+          <li><a class="google" href="#">Google&plus;</a></li>
+          <li><a class="pinterest" href="#">Pinterest</a></li>
+        </ul>
+      </div>
+      <div class="invite">
+        <h4>Invite Your Friends:</h4>
+        <input type="text" name="invite" value=""><br>
+        <button class="aqua">Send Email</button>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/vendor/jquery/jquery.js"></script>
+  <script src="/js/vendor/angular/angular.js"></script>
+  <script src="/js/vendor/angular-route/angular-route.js"></script>
+  <script src="/js/vendor/angular-animate/angular-animate.js"></script>
+  <script src="/js/core.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/nav.js"></script>
+</body>
+</html>

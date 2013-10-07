@@ -144,7 +144,7 @@ module.exports = function(grunt){
 				options: { livereload: true }
 			},
 			html: {
-				files: ['tmpl/index.html', 'partials/*.html'],
+				files: ['tmpl/index.html', 'views/*.html'],
 				tasks: ['env:dev', 'preprocess', 'notify:dev'],
 				options: { livereload: true }
 			}

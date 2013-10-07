@@ -3,12 +3,12 @@
 // YourCare App Module
 // ==========================================================================
 
-var YC_App = angular.module('YC_App', ['ngRoute']);
+var YC_App = angular.module('YC_App', ['ngRoute', 'ngAnimate']);
 
 YC_App.config( function( $routeProvider ) {
   $routeProvider.when( '/home',
     {
-      // controller  : 'HomeCtrl',
+      // controller  : 'AppCtrl',
       templateUrl : 'views/home.html'
     })
   .when( '/health',
@@ -43,9 +43,9 @@ YC_App.controller('NavCtrl', function( $scope, $location ) {
   };
 });
 
-// YC_App.controller('HomeCtrl', function( /* $scope */ ) {
-//   // TODO
-// });
+YC_App.controller('AppCtrl', function( /* $scope */ ) {
+  // TODO
+});
 
 // YC_App.controller('HealthCtrl', function( /* $scope */ ) {
 //   // TODO

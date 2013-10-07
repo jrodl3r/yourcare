@@ -398,7 +398,6 @@ footer {
 }
 
 .inner {
-  display: block;
   width: 80%;
   min-width: 960px;
   max-width: 1200px;
@@ -512,6 +511,20 @@ h3.red {
   height: 400px;
   width: 100%;
   background: rgba(255, 255, 255, 0.2);
+}
+
+.reveal-animation.ng-enter {
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  margin-top: 10px;
+  opacity: 0;
+}
+
+.reveal-animation.ng-enter.ng-enter-active {
+  margin-top: 0;
+  opacity: 1;
 }
 
 header {

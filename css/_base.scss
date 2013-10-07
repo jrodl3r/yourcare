@@ -36,6 +36,7 @@ $light-gray             :   #ccc;
 $nav-delay              :   .4s;
 $button-delay           :   .2s;
 $default-delay          :   .6s;
+$page-delay             :   1s;
 
 // Grid
 $total-columns          :   12;
@@ -86,7 +87,6 @@ footer {
 }
 
 .inner {
-  display: block;
   width: 80%;
   min-width: $page-min-width;
   max-width: $page-max-width;
@@ -192,4 +192,17 @@ h3 {
       }
     }
   }
+}
+
+
+
+
+.reveal-animation.ng-enter {
+  @include transition-duration($page-delay);
+  margin-top: 10px;
+  opacity: 0;
+}
+.reveal-animation.ng-enter.ng-enter-active {
+  margin-top: 0;
+  opacity: 1;
 }
