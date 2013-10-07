@@ -20,7 +20,7 @@
   <![endif]-->
 
   <div class="wrap">
-    <header ng-controller="NavController">
+    <header ng-controller="NavCtrl">
       <div class="statusbar">
         <div class="inner">
           <ul class="left"></ul>
@@ -93,7 +93,7 @@
       </div>
     </header>
     <div id="content">
-      <div class="inner" ng-view=""></div>
+      <div class="inner" ng-view ng-animate="{enter: 'enter-animation', leave: 'leave-animation'}"></div>
     </div>
   </div>
   <footer>
