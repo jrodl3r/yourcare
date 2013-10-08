@@ -2,12 +2,8 @@
 // ==========================================================================
 // YourCare Core Module
 // ==========================================================================
-
 YC.Debug = true;
 
-// YC.Page = {
-//   content_area          :   $('#content > .inner')
-// };
 
 YC.Nav = {
 
@@ -27,10 +23,10 @@ YC.Nav = {
   // Load Navigation
   init : function () {
     // Primary Nav
-    this.setupHomeLinks();
-    this.setupStatusMenuLinks();
-    this.setupMainMenuLinks();
-    this.setupSubNavLinks();
+    this.setupHomeButton();
+    this.setupStatusMenu();
+    this.setupMainNav();
+    this.setupSubNav();
     // Alt Nav
     this.setupStatusSearch();
   },
@@ -40,16 +36,15 @@ YC.Nav = {
   /*  *****************************************/
 
   // Setup Home-Link Click/Tap
-  setupHomeLinks : function () {
+  setupHomeButton : function () {
     this.home_link.bind( 'click', function () {
       YC.Nav.clearActiveLinks( YC.Nav.status_nav_links );
-      //YC.Nav.clearActiveLinks( YC.Nav.main_nav_links );
       YC.Nav.toggleStatusSearch('kill');
     });
   },
 
-  // Setup Status Menu Clicks/Taps
-  setupStatusMenuLinks : function () {
+  // Setup Status-Bar Clicks/Taps
+  setupStatusMenu : function () {
     this.status_nav_links.each( function () {
       $(this).bind( 'click', function (e) {
         e.preventDefault();
@@ -62,11 +57,10 @@ YC.Nav = {
     });
   },
 
-  // Setup Main Menu Clicks/Taps
-  setupMainMenuLinks : function () {
+  // Setup Main-Nav Clicks/Taps
+  setupMainNav : function () {
     this.main_nav_links.each( function () {
       $(this).bind( 'click', function () {
-        //YC.Nav.clearActiveLinks( YC.Nav.main_nav_links );
         YC.Nav.clearActiveLinks( YC.Nav.status_nav_links );
         YC.Nav.sub_nav.addClass( 'active' );
         //$(this).addClass( 'active' );
@@ -75,7 +69,7 @@ YC.Nav = {
   },
 
   // Setup Sub-Nav Menu Clicks/Taps
-  setupSubNavLinks : function () {
+  setupSubNav : function () {
     this.sub_nav_links.each( function () {
       $(this).bind( 'click', function (e) {
         e.preventDefault();
@@ -103,7 +97,7 @@ YC.Nav = {
   /*  Alt Nav *********************************/
   /*  *****************************************/
 
-  //
+  // Setup Status-Bar Quick-Search
   setupStatusSearch : function () {
     this.status_search_link.bind( 'click', function (e) {
       e.preventDefault();
@@ -114,7 +108,7 @@ YC.Nav = {
     });
   },
 
-  //
+  // [Anim] Display Quick-Search
   showStatusSearch : function () {
     this.status_nav_links.addClass( 'inactive' );
     this.status_search_panel.addClass( 'active' );
@@ -124,7 +118,7 @@ YC.Nav = {
     }, this.nav_timer_delay );
   },
 
-  //
+  // [Anim] Hide Quick-Search
   hideStatusSearch : function () {
     this.status_search_box.fadeOut();
     setTimeout( function () {
@@ -134,7 +128,7 @@ YC.Nav = {
     }, this.nav_timer_delay );
   },
 
-  //
+  // Auto-Hide-or-Show Quick-Search
   toggleStatusSearch : function ( kill ) {
     if ( kill && !this.status_search_flag ) {
       this.hideStatusSearch();
@@ -145,7 +139,7 @@ YC.Nav = {
     }
   },
 
-  //
+  // Setup Quick-Search Watermark
   toggleAutofill : function ( input ) {
     if ( input.val() === '' ) {
       input.val( 'Search' );
