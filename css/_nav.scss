@@ -55,7 +55,7 @@ header {
           text-decoration: none;
           text-align: center;
           @include no-outline();
-          @include transition-duration($nav-delay);
+          @include transition-duration($main-nav-delay);
 
           &:hover {
             color: lighten($subnav-hover-color, 15%);
@@ -88,7 +88,7 @@ header .submenu {
   min-width: $page-pad-width;
   background: lighten($subnav-bg, 5%);
   border-bottom: 1px solid lighten($subnav-color, 10%);
-  @include transition-duration($nav-delay);
+  @include transition-duration($sub-nav-delay);
 
   &.active {
     visibility: visible;
@@ -125,7 +125,7 @@ header .submenu {
         line-height: 36px;
         text-decoration: none;
         @include no-outline();
-        //@include transition-duration($nav-delay);
+        //@include transition-duration($sub-nav-delay);
         // border-right: 1px solid lighten($subnav-color, 25%);
 
         &:hover {
@@ -181,7 +181,7 @@ header .statusbar {
         margin-right: 30px;
         @extend .ir;
         @include no-outline();
-        @include transition-duration($nav-delay);
+        @include transition-duration($status-nav-delay);
 
         &.messages {
           width: 36px;
@@ -243,7 +243,7 @@ header .statusbar .status-search {
   opacity: 0;
   overflow: hidden;
   @include transition-property(all);
-  @include transition-duration($default-delay);
+  @include transition-duration($quick-search-delay);
 
   &.active {
     width: 330px;
@@ -269,7 +269,7 @@ header .statusbar .status-search {
       border: 0;
       border-radius: 15px 0 0 15px;
       @include transition-property(all);
-      @include transition-duration($default-delay);
+      @include transition-duration($quick-search-delay);
       @include no-outline();
     }
 
@@ -365,7 +365,7 @@ footer .invite {
     @include border-radius(10px);
     @include box-shadow(rgba(black, .5) 0 0 1px inset);
     @include no-outline();
-    @include transition-duration($nav-delay);
+    @include transition-duration($text-input-delay);
 
     &:hover {
       background-color: lighten($aqua, 80%);

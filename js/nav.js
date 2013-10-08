@@ -85,6 +85,7 @@ YC.Nav = {
     if ( link_set === this.status_nav_links ) {
       link_set.removeClass( 'active' );
     // Main Menu Links
+    // TODO: Remove this.
     } else if ( link_set === this.main_nav_links ) {
       link_set.removeClass( 'active' );
       YC.Nav.sub_nav.removeClass( 'active' );

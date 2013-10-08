@@ -25,6 +25,8 @@
 * Interior panel layout + componentry
 * Messages menu system (fb style)
 * Slow-down nav css-animations (ipads)
+* Update sub-nav + active menu-item design
+
 
 ###Next
 * Explore pinning-feature options

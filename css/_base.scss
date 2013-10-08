@@ -33,10 +33,14 @@ $gray                   :   #a3a8ab;
 $light-gray             :   #ccc;
 
 // Timers
-$nav-delay              :   .4s;
-$button-delay           :   .2s;
-$default-delay          :   .6s;
+$main-nav-delay         :   .8s;
+$status-nav-delay       :   .5s;
+$sub-nav-delay          :   .5s;
+$quick-search-delay     :   .6s;
+
 $content-delay          :   1s;
+$button-delay           :   .2s;
+$text-input-delay       :   .5s;
 
 // Grid
 $total-columns          :   12;

@@ -577,10 +577,10 @@ header nav.main ul li a {
   text-align: center;
   outline: none;
   -webkit-tap-highlight-color: transparent;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
 }
 header nav.main ul li a:hover {
   color: #718cab;
@@ -603,10 +603,10 @@ header .submenu {
   min-width: 1000px;
   background: #e4e4e4;
   border-bottom: 1px solid #a8a8ac;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 header .submenu.active {
   visibility: visible;
@@ -679,10 +679,10 @@ header .statusbar ul li a {
   margin-right: 30px;
   outline: none;
   -webkit-tap-highlight-color: transparent;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 header .statusbar ul li a.messages {
   width: 36px;
@@ -853,10 +853,10 @@ footer .invite input {
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 1px inset;
   outline: none;
   -webkit-tap-highlight-color: transparent;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 footer .invite input:hover {
   background-color: white;
@@ -944,7 +944,6 @@ header a.home {
 header nav.main ul a {
   background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTJweCIgaGVpZ2h0PSI2cHgiIHZpZXdCb3g9IjAgMCAxMiA2IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxMiA2OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggc3R5bGU9ImZpbGw6IzM1YmRiMjsiIGQ9Ik02LDAuMDM5Yy0zLjI2NywwLTUuOTIyLDIuNjQ2LTUuOTIyLDUuOTIyaDExLjg0NEMxMS45MjIsMi42ODUsOS4yNjcsMC4wMzksNiwwLjAzOXoiLz48L3N2Zz4NCg==') center 43px no-repeat;
 }
-
 header .statusbar a.messages {
   background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMzZweCIgaGVpZ2h0PSIyOXB4IiB2aWV3Qm94PSIwIDAgMzYgMjkuNDQ4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzNiAyOS40NDg7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBzdHlsZT0iZmlsbDojRkZGRkZGOyIgZD0iTTAsMTcuNjY3YzAsMi43NjEsMi4yMzgsNSw1LDVoMjZjMi43NjIsMCw1LTIuMjM5LDUtNVY1YzAtMi43NjEtMi4yMzgtNS01LTVINUMyLjIzOCwwLDAsMi4yMzksMCw1CVYxNy42Njd6Ii8+PHBvbHlnb24gc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIHBvaW50cz0iMjYuMjczLDI5LjQ0OCAyNi4yNzMsMjEuMjEyIDM0LjUwOSwyMS4yMTIgIi8+PC9zdmc+DQo=') no-repeat;
 }
