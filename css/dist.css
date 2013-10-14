@@ -437,10 +437,10 @@ h3.red {
   padding: 40px 0 50px;
 }
 #content .inner.reveal-animation.ng-enter {
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
+  -webkit-transition-duration: 1.2s;
+  -moz-transition-duration: 1.2s;
+  -o-transition-duration: 1.2s;
+  transition-duration: 1.2s;
   opacity: 0;
 }
 #content .inner.reveal-animation.ng-enter.ng-enter-active {
