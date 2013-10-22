@@ -37,7 +37,7 @@ YC.Nav = {
 
   // Setup Home-Link Click/Tap
   setupHomeButton : function () {
-    this.home_link.bind( 'click', function () {
+    this.home_link.bind('click', function () {
       YC.Nav.clearActiveLinks( YC.Nav.status_nav_links );
       YC.Nav.toggleStatusSearch('kill');
     });
@@ -45,13 +45,13 @@ YC.Nav = {
 
   // Setup Status-Bar Clicks/Taps
   setupStatusMenu : function () {
-    this.status_nav_links.each( function () {
-      $(this).bind( 'click', function (e) {
+    this.status_nav_links.each(function () {
+      $(this).bind('click', function (e) {
         e.preventDefault();
         YC.Nav.clearActiveLinks( YC.Nav.status_nav_links );
-        if ( !$(this).hasClass( 'search' ) ) {
+        if ( !$(this).hasClass('search') ) {
           YC.Nav.toggleStatusSearch('kill');
-          $(this).addClass( 'active' );
+          $(this).addClass('active');
         }
       });
     });
@@ -59,11 +59,10 @@ YC.Nav = {
 
   // Setup Main-Nav Clicks/Taps
   setupMainNav : function () {
-    this.main_nav_links.each( function () {
-      $(this).bind( 'click', function () {
+    this.main_nav_links.each(function () {
+      $(this).bind('click', function () {
         YC.Nav.clearActiveLinks( YC.Nav.status_nav_links );
-        YC.Nav.sub_nav.addClass( 'active' );
-        //$(this).addClass( 'active' );
+        YC.Nav.sub_nav.addClass('active');
       });
     });
   },
@@ -71,10 +70,10 @@ YC.Nav = {
   // Setup Sub-Nav Menu Clicks/Taps
   setupSubNav : function () {
     this.sub_nav_links.each( function () {
-      $(this).bind( 'click', function (e) {
+      $(this).bind('click', function (e) {
         e.preventDefault();
         YC.Nav.sub_nav_links.removeClass( 'active' );
-        $(this).addClass( 'active' );
+        $(this).addClass('active');
       });
     });
   },
@@ -83,12 +82,12 @@ YC.Nav = {
   clearActiveLinks : function (link_set) {
     // Status Nav Links
     if ( link_set === this.status_nav_links ) {
-      link_set.removeClass( 'active' );
+      link_set.removeClass('active');
     // Main Menu Links
     // TODO: Remove this.
     } else if ( link_set === this.main_nav_links ) {
-      link_set.removeClass( 'active' );
-      YC.Nav.sub_nav.removeClass( 'active' );
+      link_set.removeClass('active');
+      YC.Nav.sub_nav.removeClass('active');
     } else if ( YC.Debug ) {
       console.error('nav.js : YC.Nav.clearActiveLinks() - Fail');
     }
@@ -100,19 +99,19 @@ YC.Nav = {
 
   // Setup Status-Bar Quick-Search
   setupStatusSearch : function () {
-    this.status_search_link.bind( 'click', function (e) {
+    this.status_search_link.bind('click', function (e) {
       e.preventDefault();
       YC.Nav.toggleStatusSearch();
     });
-    this.status_search_input.on( 'focus blur', function () {
-      YC.Nav.toggleAutofill( $(this) );
+    this.status_search_input.on('focus blur', function() {
+      YC.Nav.toggleAutofill($(this));
     });
   },
 
   // [Anim] Display Quick-Search
   showStatusSearch : function () {
-    this.status_nav_links.addClass( 'inactive' );
-    this.status_search_panel.addClass( 'active' );
+    this.status_nav_links.addClass('inactive');
+    this.status_search_panel.addClass('active');
     setTimeout( function () {
       YC.Nav.status_search_box.fadeIn();
       YC.Nav.status_search_flag = true;
@@ -123,14 +122,14 @@ YC.Nav = {
   hideStatusSearch : function () {
     this.status_search_box.fadeOut();
     setTimeout( function () {
-      YC.Nav.status_search_panel.removeClass( 'active' );
-      YC.Nav.status_nav_links.removeClass( 'inactive' );
+      YC.Nav.status_search_panel.removeClass('active');
+      YC.Nav.status_nav_links.removeClass('inactive');
       YC.Nav.status_search_flag = false;
-    }, this.nav_timer_delay );
+    }, this.nav_timer_delay);
   },
 
   // Auto-Hide-or-Show Quick-Search
-  toggleStatusSearch : function ( kill ) {
+  toggleStatusSearch : function (kill) {
     if ( kill && !this.status_search_flag ) {
       this.hideStatusSearch();
     } else if( !this.status_search_flag ) {
@@ -141,9 +140,9 @@ YC.Nav = {
   },
 
   // Setup Quick-Search Watermark
-  toggleAutofill : function ( input ) {
+  toggleAutofill : function (input) {
     if ( input.val() === '' ) {
-      input.val( 'Search' );
+      input.val('Search');
     } else if ( input.val() === 'Search' ) {
       input.val('');
     }

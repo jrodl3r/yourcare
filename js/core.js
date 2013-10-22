@@ -4,11 +4,10 @@
 
 var YC = {
   init : function () {
-   // this.App.init();
     this.Nav.init();
   }
 };
 
-$(document).ready( function () {
+$(document).ready(function () {
   YC.init();
 });
