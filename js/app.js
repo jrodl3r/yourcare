@@ -43,22 +43,8 @@ YC_App.controller('NavCtrl', function( $scope, $location ) {
   };
 });
 
-YC_App.controller('AppCtrl', function( /* $scope */ ) {
-  // TODO
-});
-
-// YC_App.controller('HealthCtrl', function( /* $scope */ ) {
-//   // TODO
-// });
-
-// YC_App.controller('GoalsCtrl', function( /* $scope */ ) {
-//   // TODO
-// });
-
-// YC_App.controller('CalCtrl', function( /* $scope */ ) {
-//   // TODO
-// });
-
-// YC_App.controller('ComCtrl', function( /* $scope */ ) {
-//   // TODO
-// });
+YC_App.controller('AppCtrl', function() { });
+// YC_App.controller('HealthCtrl', function($scope) { });
+// YC_App.controller('GoalsCtrl', function($scope) { });
+// YC_App.controller('CalCtrl', function($scope) { });
+// YC_App.controller('ComCtrl', function($scope) { });
