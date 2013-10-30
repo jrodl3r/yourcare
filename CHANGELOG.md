@@ -19,7 +19,12 @@
 ###Phase 3
 * **READY** Setup AngularJS header-nav logic
 * **READY** Setup AngularJS routing animations
-* Setup panel layout + menu templates
+* Panel UI: Alerts
+* Panel UI: Leaderboard (header, body, flyout menus)
+* Panel UI: Nav Elements (options menu, tabs)
+* Panel UI: Calorie Burner (loading animation)
+* Panel UI: Running Mate (iOS switches, gMaps)
+* Setup interior-page lateral routing animations 
 * Modal dialog system (avgrund)
 * Drag-n-drop modular panel system
 * Interior panel layout + componentry
