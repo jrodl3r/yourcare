@@ -88,7 +88,7 @@ module.exports = function(grunt){
 
 		preprocess: {
 			dist: {
-				src: 'tmpl/index.html',
+				src: 'templates/index.html',
 				dest: 'index.html'
 			}
 		},
@@ -144,7 +144,7 @@ module.exports = function(grunt){
 				options: { livereload: true }
 			},
 			html: {
-				files: ['tmpl/index.html', 'views/*.html'],
+				files: ['templates/index.html', 'views/*.html'],
 				tasks: ['env:dev', 'preprocess', 'notify:dev'],
 				options: { livereload: true }
 			}
