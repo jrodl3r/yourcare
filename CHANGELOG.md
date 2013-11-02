@@ -31,6 +31,7 @@
 * Messages menu system (fb style)
 * Slow-down nav css-animations (ipads)
 * Update sub-nav + active menu-item design
+* Add grunt-ngmin to build proc
 
 
 ###Next
