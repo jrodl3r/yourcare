@@ -31,7 +31,6 @@
 * Messages menu system (fb style)
 * Slow-down nav css-animations (ipads)
 * Update sub-nav + active menu-item design
-* Add grunt-ngmin to build proc
 
 
 ###Next
@@ -39,4 +38,5 @@
 * Setup scalable css gradient background
 * Panel fade load-in (pinterest-style)
 * Statusbar pop-under menu-item labels
+* Add grunt-ngmin to build proc
 
