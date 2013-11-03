@@ -2,7 +2,7 @@
 // ==========================================================================
 // YourCare Core Module
 // ==========================================================================
-YC.Debug = true;
+YC.Debug = true; // TODO
 
 
 YC.Nav = {
@@ -43,7 +43,7 @@ YC.Nav = {
     });
   },
 
-  // Setup Status-Bar Clicks/Taps
+  // Setup Status-Bar-Links Clicks/Taps
   setupStatusMenu : function () {
     this.status_nav_links.each(function () {
       $(this).bind('click', function (e) {
@@ -57,7 +57,7 @@ YC.Nav = {
     });
   },
 
-  // Setup Main-Nav Clicks/Taps
+  // Setup Main-Nav-Links Clicks/Taps
   setupMainNav : function () {
     this.main_nav_links.each(function () {
       $(this).bind('click', function () {
@@ -67,7 +67,7 @@ YC.Nav = {
     });
   },
 
-  // Setup Sub-Nav Menu Clicks/Taps
+  // Setup Sub-Nav-Links Clicks/Taps
   setupSubNav : function () {
     this.sub_nav_links.each( function () {
       $(this).bind('click', function (e) {
@@ -78,13 +78,13 @@ YC.Nav = {
     });
   },
 
-  // Clear Active Links ON [link_set]
+  // Clear Active Menu-Links [link_set : status-menu || main-menu]
   clearActiveLinks : function (link_set) {
     // Status Nav Links
     if ( link_set === this.status_nav_links ) {
       link_set.removeClass('active');
     // Main Menu Links
-    // TODO: Remove this.
+    // TODO: Remove this + Add Debug-Logger
     } else if ( link_set === this.main_nav_links ) {
       link_set.removeClass('active');
       YC.Nav.sub_nav.removeClass('active');
