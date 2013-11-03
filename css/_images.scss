@@ -10,15 +10,12 @@
 
 // Header
 header {
-
   a.home {
     background: inline_image('../img/logo.svg') no-repeat;
   }
-
   nav.main ul a {
     background: inline_image('../img/nav-marker.svg') center 43px no-repeat;
   }
-
   .statusbar a {
 
     &.messages {
@@ -43,18 +40,15 @@ header {
 }
 
 // Footer
-footer .social ul a {
-
-  &.facebook {
-    background: inline_image('../img/social-facebook.svg') no-repeat;
-  }
-  &.twiiter {
-    background: inline_image('../img/social-twitter.svg') no-repeat;
-  }
-  &.google {
-    background: inline_image('../img/social-google.svg') no-repeat;
-  }
-  &.pinterest {
-    background: inline_image('../img/social-pinterest.svg') no-repeat;
-  }
+.facebook-icon {
+  background: inline_image('../img/social-facebook.svg') no-repeat;
+}
+.twiiter-icon {
+  background: inline_image('../img/social-twitter.svg') no-repeat;
+}
+.google-icon {
+  background: inline_image('../img/social-google.svg') no-repeat;
+}
+.pinterest-icon {
+  background: inline_image('../img/social-pinterest.svg') no-repeat;
 }

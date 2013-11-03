@@ -1,0 +1,63 @@
+// ==========================================================================
+// Content Panels
+// ==========================================================================
+
+.panel {
+  position: relative;
+  float: left;
+  min-height: 150px;
+  margin-bottom: $grid-padding;
+  padding: 10px 0;
+  background-color: white;
+  @include border-radius(8px);
+
+  &.opaque, &.alerts, &.tools {
+    background: rgba(white, .5);
+  }
+
+  &.header {
+    padding-top: 0;
+    min-height: 160px;
+  }
+
+  .header {
+    width: 100%;
+    padding: 15px 0 10px;
+    background-color: white;
+    @include border-radius(8px 8px 0 0);
+
+    h3 {
+      margin: 0;
+    }
+  }
+
+  h3 {
+    font-size: 21px;
+    text-align: center;
+  }
+}
+
+.left-content .panel {
+
+  &.left {
+    @include span-columns(4, 8);
+  }
+  &.right {
+    @include span-columns(4 omega, 8);
+  }
+  &.last {
+    margin-bottom: 0;
+  }
+  &.full {
+    width: 100%;
+
+    h3 {
+      text-align: left;
+      text-indent: 35px;
+    }
+  }
+}
+
+.right-column .panel {
+  width: 100%;
+}
