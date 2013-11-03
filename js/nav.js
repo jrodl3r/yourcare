@@ -97,7 +97,7 @@ YC.Nav = {
   /*  Alt Nav *********************************/
   /*  *****************************************/
 
-  // Setup Status-Bar Quick-Search
+  // Setup Status-Bar Quick-Search Clicks|Focus|Blur
   setupStatusSearch : function () {
     this.status_search_link.bind('click', function (e) {
       e.preventDefault();
@@ -108,7 +108,7 @@ YC.Nav = {
     });
   },
 
-  // [Anim] Display Quick-Search
+  // Display Quick-Search [CSS-Anim, jQuery-FadeIn]
   showStatusSearch : function () {
     this.status_nav_links.addClass('inactive');
     this.status_search_panel.addClass('active');
@@ -118,7 +118,7 @@ YC.Nav = {
     }, this.nav_timer_delay );
   },
 
-  // [Anim] Hide Quick-Search
+  // Hide Quick-Search [jQuery-FadeOut, CSS-Anim]
   hideStatusSearch : function () {
     this.status_search_box.fadeOut();
     setTimeout( function () {
@@ -128,7 +128,7 @@ YC.Nav = {
     }, this.nav_timer_delay);
   },
 
-  // Auto-Hide-or-Show Quick-Search
+  // Flip Quick-Search Display Status
   toggleStatusSearch : function (kill) {
     if ( kill && !this.status_search_flag ) {
       this.hideStatusSearch();
@@ -139,7 +139,7 @@ YC.Nav = {
     }
   },
 
-  // Setup Quick-Search Watermark
+  // Flip Quick-Search Watermark
   toggleAutofill : function (input) {
     if ( input.val() === '' ) {
       input.val('Search');
