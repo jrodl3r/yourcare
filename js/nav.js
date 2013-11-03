@@ -2,8 +2,6 @@
 // ==========================================================================
 // YourCare Core Module
 // ==========================================================================
-YC.Debug = true; // TODO
-
 
 YC.Nav = {
 
@@ -49,6 +47,7 @@ YC.Nav = {
       $(this).bind('click', function (e) {
         e.preventDefault();
         YC.Nav.clearActiveLinks( YC.Nav.status_nav_links );
+
         if ( !$(this).hasClass('search') ) {
           YC.Nav.toggleStatusSearch('kill');
           $(this).addClass('active');
@@ -88,7 +87,8 @@ YC.Nav = {
     } else if ( link_set === this.main_nav_links ) {
       link_set.removeClass('active');
       YC.Nav.sub_nav.removeClass('active');
-    } else if ( YC.Debug ) {
+
+    } else if ( YC.DEBUG ) {
       console.error('nav.js : YC.Nav.clearActiveLinks() - Fail');
     }
   },
@@ -112,6 +112,7 @@ YC.Nav = {
   showStatusSearch : function () {
     this.status_nav_links.addClass('inactive');
     this.status_search_panel.addClass('active');
+
     setTimeout( function () {
       YC.Nav.status_search_box.fadeIn();
       YC.Nav.status_search_flag = true;
@@ -121,6 +122,7 @@ YC.Nav = {
   // Hide Quick-Search [jQuery-FadeOut, CSS-Anim]
   hideStatusSearch : function () {
     this.status_search_box.fadeOut();
+
     setTimeout( function () {
       YC.Nav.status_search_panel.removeClass('active');
       YC.Nav.status_nav_links.removeClass('inactive');
@@ -132,8 +134,10 @@ YC.Nav = {
   toggleStatusSearch : function (kill) {
     if ( kill && !this.status_search_flag ) {
       this.hideStatusSearch();
+
     } else if( !this.status_search_flag ) {
       this.showStatusSearch();
+
     } else {
       this.hideStatusSearch();
     }
@@ -143,6 +147,7 @@ YC.Nav = {
   toggleAutofill : function (input) {
     if ( input.val() === '' ) {
       input.val('Search');
+
     } else if ( input.val() === 'Search' ) {
       input.val('');
     }

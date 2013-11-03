@@ -39,4 +39,4 @@
 * Panel fade load-in (pinterest-style)
 * Statusbar pop-under menu-item labels
 * Add grunt-ngmin to build proc
-
+* Add JS debug-logger
