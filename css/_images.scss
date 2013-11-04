@@ -8,6 +8,41 @@
   background-size: cover;
 }
 
+// Panels
+.panel {
+  // Options Buttons
+  .options {
+    background: inline_image('../img/panel-options-button-off.svg') center no-repeat;
+    &.on {
+      background-image: inline_image('../img/panel-options-button-on.svg');
+    }
+  }
+  // Alerts Panel
+  &.alerts ul li {
+    &.top {
+      background: inline_image('../img/alerts-panel-top.svg') top center no-repeat;
+    }
+    &.refill p {
+      background: inline_image('../img/icon-white-refill.svg') center left no-repeat;
+    }
+    &.record p {
+      background: inline_image('../img/icon-white-record.svg') center left no-repeat;
+    }
+    &.summary p {
+      background: inline_image('../img/icon-white-summary.svg') center left no-repeat;
+    }
+    &.blue.event p {
+      background: inline_image('../img/icon-blue-event.svg') center left no-repeat;
+    }
+    a.plus {
+      background: inline_image('../img/button-white-plus.svg') center no-repeat;
+    }
+    &.blue a.plus {
+      background: inline_image('../img/button-blue-plus.svg') center no-repeat;
+    }
+  }
+}
+
 // Header
 header {
   a.home {
@@ -17,7 +52,6 @@ header {
     background: inline_image('../img/nav-marker.svg') center 43px no-repeat;
   }
   .statusbar a {
-
     &.messages {
       background: inline_image('../img/messages.svg') no-repeat;
     }
@@ -39,7 +73,7 @@ header {
   }
 }
 
-// Footer
+// Social Icons
 .facebook-icon {
   background: inline_image('../img/social-facebook.svg') no-repeat;
 }

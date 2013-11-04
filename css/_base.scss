@@ -132,6 +132,7 @@ h3 {
 
 #content .inner {
   padding: 40px 0 50px;
+  font-family: $font-default;
 
   &.reveal-animation.ng-enter {
     @include transition-duration($content-delay);
@@ -142,14 +143,14 @@ h3 {
   }
 
   .area {
-    // @include susy-grid-background;
-    @include container;
+    padding-top: 36px;
     padding-left: 0;
     padding-right: 0;
-    font-family: $font-default;
+    @include container;
+    // @include susy-grid-background;
 
-    &#health, &#goals, &#calendar, &#community {
-      padding-top: 36px;
+    &#home {
+      padding-top: 0;
     }
 
     .left-content {

@@ -5,20 +5,77 @@
 .panel {
   position: relative;
   float: left;
-  min-height: 150px;
+  min-height: 200px;
   margin-bottom: $grid-padding;
   padding: 10px 0;
   background-color: white;
   @include border-radius(8px);
 
-  &.opaque, &.alerts, &.tools {
+  h3 {
+    margin-top: 10px;
+    font-size: 21px;
+    text-align: center;
+  }
+
+  a.options {
+    @extend .ir;
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    display: block;
+    width: 20px;
+    height: 13px;
+    @include no-outline();
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+
+
+
+
+
+
+  &.last {
+    margin-bottom: 0;
+  }
+
+  &.opaque {
     background: rgba(white, .5);
   }
 
-  &.header {
-    padding-top: 0;
-    min-height: 160px;
+}
+
+// Left-Content Panels
+.left-content .panel {
+  &.left {
+    @include span-columns(4, 8);
   }
+  &.right {
+    @include span-columns(4 omega, 8);
+  }
+  &.full {
+    width: 100%;
+  }
+}
+
+// Right-Column Panels
+.right-column .panel {
+  width: 100%;
+
+  h3 {
+    font-size: 19px;
+    text-align: left;
+    text-indent: 23px;
+  }
+}
+
+// Panel Headers
+.panel.header {
+  padding-top: 0;
+  min-height: 210px;
 
   .header {
     width: 100%;
@@ -28,36 +85,85 @@
 
     h3 {
       margin: 0;
-    }
-  }
-
-  h3 {
-    font-size: 21px;
-    text-align: center;
-  }
-}
-
-.left-content .panel {
-
-  &.left {
-    @include span-columns(4, 8);
-  }
-  &.right {
-    @include span-columns(4 omega, 8);
-  }
-  &.last {
-    margin-bottom: 0;
-  }
-  &.full {
-    width: 100%;
-
-    h3 {
       text-align: left;
-      text-indent: 35px;
+      text-indent: 23px;
     }
   }
 }
 
-.right-column .panel {
-  width: 100%;
+// Alerts Panel
+.panel.alerts {
+  ul {
+    @include reset-list();
+    //background: #69f;
+    width: 90%;
+    margin: 0 auto;
+
+    li {
+      float: left;
+      width: 100%;
+      padding-bottom: 24px;
+      line-height: 60px;
+
+      p {
+        float: left;
+        margin: 0;
+        padding-left: 60px;
+        width: 70%;
+        color: white;
+        font-family: GothamBook;
+        font-size: 12px;
+        line-height: 16px;
+
+        span {
+          font-family: GothamMedium;
+          font-size: 14px;
+        }
+      }
+
+      a.plus {
+        @extend .ir;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+
+        &:hover {
+          opacity: 0.75;
+        }
+      }
+
+      &.blue {
+        p {
+          color: $blue;
+          font-size: 14px;
+        }
+      }
+      &.top {
+        height: 42px;
+        margin-top: 5px;
+      }
+      &.bottom {
+        padding: 0;
+        line-height: normal;
+        text-align: center;
+
+        button {
+          display: inline-block;
+          width: 160px;
+          margin-top: 5px;
+          padding: 6px 0 4px;
+          color: $blue;
+          font-family: GothamBook;
+          font-size: 14px;
+          background-color: rgba(255,255,255,0.5);
+          @include border-radius(7px);
+
+          &:hover {
+            background-color: rgba(255,255,255,0.7);
+            text-shadow: 0 0 5px rgba($blue, 0.35);
+          }
+        }
+      }
+    }
+  }
 }
