@@ -935,8 +935,8 @@ footer .invite button {
 .panel.alerts ul li p {
   float: left;
   margin: 0;
-  padding-left: 60px;
-  width: 70%;
+  padding-left: 55px;
+  width: 72%;
   color: white;
   font-family: GothamBook;
   font-size: 12px;
@@ -969,18 +969,19 @@ footer .invite button {
 }
 .panel.alerts ul li.bottom button {
   display: inline-block;
-  width: 160px;
+  width: 120px;
   margin-top: 5px;
+  margin-bottom: 10px;
   padding: 6px 0 4px;
   color: #007aff;
   font-family: GothamBook;
   font-size: 14px;
   background-color: rgba(255, 255, 255, 0.5);
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
-  border-radius: 7px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
 }
 .panel.alerts ul li.bottom button:hover {
   background-color: rgba(255, 255, 255, 0.7);

@@ -108,8 +108,8 @@
       p {
         float: left;
         margin: 0;
-        padding-left: 60px;
-        width: 70%;
+        padding-left: 55px;
+        width: 72%;
         color: white;
         font-family: GothamBook;
         font-size: 12px;
@@ -149,14 +149,15 @@
 
         button {
           display: inline-block;
-          width: 160px;
+          width: 120px;
           margin-top: 5px;
+          margin-bottom: 10px;
           padding: 6px 0 4px;
           color: $blue;
           font-family: GothamBook;
           font-size: 14px;
           background-color: rgba(255,255,255,0.5);
-          @include border-radius(7px);
+          @include border-radius(8px);
 
           &:hover {
             background-color: rgba(255,255,255,0.7);
