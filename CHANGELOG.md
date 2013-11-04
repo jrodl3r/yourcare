@@ -19,7 +19,7 @@
 ###Phase 3
 * **READY** Setup AngularJS header-nav logic
 * **READY** Setup AngularJS routing animations
-* Panel UI: Alerts
+* **READY** Panel UI: Alerts
 * Panel UI: Leaderboard (header, body, flyout menus)
 * Panel UI: Nav Elements (options menu, tabs)
 * Panel UI: Calorie Burner (loading animation)
