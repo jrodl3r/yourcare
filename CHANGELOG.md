@@ -17,6 +17,7 @@
 * **READY** Setup Susy grid layout system
 
 ###Phase 3
+* Add grunt-ngmin to build proc
 * **READY** Setup AngularJS header-nav logic
 * **READY** Setup AngularJS routing animations
 * **READY** Panel UI: Alerts
@@ -40,3 +41,6 @@
 * Statusbar pop-under menu-item labels
 * Add grunt-ngmin to build proc
 * Add JS debug-logger
+
+
+
