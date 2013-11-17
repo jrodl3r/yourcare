@@ -22,6 +22,7 @@
 * **READY** Setup AngularJS routing animations
 * **READY** Panel UI: Alerts
 * **READY** Panel UI: Running Mate (iOS switches, gMaps)
+* **READY** Panel UI: Tools & Resources
 * Panel UI: Leaderboard (header, body, flyout menus)
 * Panel UI: Nav Elements (options menu, tabs)
 * Panel UI: Calorie Burner (loading animation)

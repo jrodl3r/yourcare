@@ -17,6 +17,31 @@
       background-image: inline_image('../img/panel-options-button-on.svg');
     }
   }
+
+  // Plus Icon-Buttons
+  a.plus, span.plus {
+    background: inline_image('../img/button-white-plus.svg') center no-repeat;
+  }
+  .blue a.plus, .blue span.plus {
+    background: inline_image('../img/button-blue-plus.svg') center no-repeat;
+  }
+
+  // Tools & Resources
+  &.tools ul li {
+    a.download {
+      background: inline_image('../img/icon-white-small-download.svg') center left no-repeat;
+    }
+    a.wrench {
+      background: inline_image('../img/icon-white-small-wrench.svg') center left no-repeat;
+    }
+    a.add {
+      background: inline_image('../img/icon-white-small-add.svg') center left no-repeat;
+    }
+    a.doc {
+      background: inline_image('../img/icon-white-small-doc.svg') center left no-repeat;
+    }
+  }
+
   // Alerts Panel
   &.alerts ul li {
     &.top {
@@ -33,12 +58,6 @@
     }
     &.blue.event p {
       background: inline_image('../img/icon-blue-event.svg') center left no-repeat;
-    }
-    a.plus {
-      background: inline_image('../img/button-white-plus.svg') center no-repeat;
-    }
-    &.blue a.plus {
-      background: inline_image('../img/button-blue-plus.svg') center no-repeat;
     }
   }
 

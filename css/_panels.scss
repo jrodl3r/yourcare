@@ -11,10 +11,21 @@
   background-color: white;
   @include border-radius(8px);
 
+  &.last {
+    margin-bottom: 0;
+  }
+  &.opaque {
+    background: rgba(white, .5);
+  }
+
   h3 {
     margin-top: 10px;
     font-size: 21px;
     text-align: center;
+  }
+
+  ul {
+    @include reset-list();
   }
 
   a.options {
@@ -32,20 +43,16 @@
     }
   }
 
+  a.plus, span.plus {
+    @extend .ir;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
 
-
-
-
-
-
-  &.last {
-    margin-bottom: 0;
+    &:hover {
+      opacity: 0.75;
+    }
   }
-
-  &.opaque {
-    background: rgba(white, .5);
-  }
-
 }
 
 // Left-Content Panels
@@ -94,8 +101,6 @@
 // Alerts Panel
 .panel.alerts {
   ul {
-    @include reset-list();
-    //background: #69f;
     width: 90%;
     margin: 0 auto;
 
@@ -118,17 +123,6 @@
         span {
           font-family: GothamMedium;
           font-size: 14px;
-        }
-      }
-
-      a.plus {
-        @extend .ir;
-        display: inline-block;
-        height: 20px;
-        width: 20px;
-
-        &:hover {
-          opacity: 0.75;
         }
       }
 
@@ -164,7 +158,6 @@
 
   .header {
     ul {
-      @include reset-list();
       width: 100%;
       margin: 0 auto;
 
@@ -194,7 +187,6 @@
   }
 
   ul.flyout {
-    @include reset-list();
     height: 100%;
     width: 50%;
     @include background-image(linear-gradient(#cfcdc7, #b7c6cc));
@@ -213,9 +205,9 @@
       }
       &.minutes, &.miles, &.calories {
         float: right;
-        width: 56%;
+        width: 60%;
         margin: 14px 0;
-        padding: 12px 0 12px 53px;
+        padding: 12px 0 12px 50px;
         text-align: left;
         font-size: 15px;
       }
@@ -236,5 +228,52 @@
     bottom: 10px;
     left: 33%;
     background-color: rgba($off-white, .95);
+  }
+}
+
+.panel.tools {
+  padding-bottom: 0;
+
+  ul {
+    width: 90%;
+    margin: -10px 0 0 20px;
+
+    li {
+      float: left;
+      width: 97%;
+      margin-left: 3%;
+
+      a {
+        float: left;
+        height: 25px;
+        width: 80%;
+        padding: 5px 0 5px 45px;
+        color: white;
+        text-decoration: none;
+        line-height: 25px;
+        opacity: 0.8;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &.download {
+
+        }
+        &.wrench {
+
+        }
+        &.add {
+
+        }
+        &.doc {
+
+        }
+        span.plus {
+          float: right;
+          margin-top: 1px;
+        }
+      }
+    }
   }
 }
