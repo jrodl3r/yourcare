@@ -1,0 +1,41 @@
+// ==========================================================================
+// Forms & Inputs
+// ==========================================================================
+
+// Panel Checkbox Sliders
+.panel {
+  input.slider-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    box-shadow: inset 0px 0px 0px 1px #ddd;
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 1px;
+    display: inline-block;
+    width: 38px;
+    height: 21px;
+    position: relative;
+    cursor: pointer;
+    transition: all .4s ease-out;
+    margin: 0px;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    outline: none;
+  }
+  input.slider-checkbox:checked {
+    box-shadow: inset 0px 0px 0px 20px $aqua;
+  }
+  input.slider-checkbox:after {
+    content: '';
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 2px 1px rgba(0,0,0,.1);
+    cursor: pointer;
+    background-color: #fff;
+  }
+  input.slider-checkbox:checked:after {
+    left: 18px;
+  }
+}

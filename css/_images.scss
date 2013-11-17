@@ -41,6 +41,18 @@
       background: inline_image('../img/button-blue-plus.svg') center no-repeat;
     }
   }
+
+  &.runner ul li {
+    &.minutes {
+      background: inline_image('../img/icon-white-runner.svg') center left no-repeat;
+    }
+    &.miles {
+      background: inline_image('../img/icon-white-location.svg') center left no-repeat;
+    }
+    &.calories {
+      background: inline_image('../img/icon-white-burn.svg') center left no-repeat;
+    }
+  }
 }
 
 // Header
@@ -85,4 +97,7 @@ header {
 }
 .pinterest-icon {
   background: inline_image('../img/social-pinterest.svg') no-repeat;
+}
+.nike-icon {
+  background: inline_image('../img/social-nike.svg') no-repeat;
 }

@@ -148,23 +148,93 @@
         text-align: center;
 
         button {
-          display: inline-block;
           width: 120px;
           margin-top: 5px;
           margin-bottom: 10px;
-          padding: 6px 0 4px;
-          color: $blue;
-          font-family: GothamBook;
-          font-size: 14px;
-          background-color: rgba(255,255,255,0.5);
-          @include border-radius(8px);
-
-          &:hover {
-            background-color: rgba(255,255,255,0.7);
-            text-shadow: 0 0 5px rgba($blue, 0.35);
-          }
         }
       }
     }
+  }
+}
+
+.panel.runner {
+  height: 375px;
+  background: url(../img/placeholder-map.png) right 40px no-repeat;
+  overflow: hidden;
+
+  .header {
+    ul {
+      @include reset-list();
+      width: 100%;
+      margin: 0 auto;
+
+      li {
+        display: inline-block;
+        width: 40%;
+
+        &:first-of-type {
+          margin-left: 13%;
+        }
+
+        input {
+          top: -5px;
+        }
+
+        label {
+          @extend .ir;
+          @include no-outline();
+          display: inline-block;
+          height: 35px;
+          width: 35px;
+          margin: 5px 0 0 15px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  ul.flyout {
+    @include reset-list();
+    height: 100%;
+    width: 50%;
+    @include background-image(linear-gradient(#cfcdc7, #b7c6cc));
+    box-shadow: 5px 2px 5px rgba(black, 0.12);
+
+    li {
+      width: 100%;
+      padding: 10px 0;
+      text-align: center;
+      font: 14px $font-gotham;
+      text-shadow: 1px 0 6px rgba(white, 1);
+
+      &.title {
+        color: white;
+        text-shadow: none;
+      }
+      &.minutes, &.miles, &.calories {
+        float: right;
+        width: 56%;
+        margin: 14px 0;
+        padding: 12px 0 12px 53px;
+        text-align: left;
+        font-size: 15px;
+      }
+      &.minutes {
+        color: $blue;
+      }
+      &.miles {
+        color: $aqua;
+      }
+      &.calories {
+        color: $orange;
+      }
+    }
+  }
+
+  button.update {
+    position: absolute;
+    bottom: 10px;
+    left: 33%;
+    background-color: rgba($off-white, .95);
   }
 }

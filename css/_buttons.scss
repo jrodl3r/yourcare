@@ -6,10 +6,9 @@
 
 button {
   padding: 0;
-  color: white;
-  font-size: 12px;
-  font-family: $font-multicolore;
   text-align: center;
+  font: 12px $font-multicolore;
+  color: white;
   background-color: $gray;
   border: 0;
   @include border-radius(4px);
@@ -41,4 +40,20 @@ button {
   }
 
   // &.blue {}
+}
+
+.panel button {
+  display: inline-block;
+  width: 120px;
+  padding: 6px 0 4px;
+  font: 14px $font-gotham;
+  color: $blue;
+  background-color: rgba(white, 0.5);
+  @include border-radius(8px);
+
+  &:hover {
+    background-color: rgba(white, 0.85) !important;
+    box-shadow: 0 0 13px rgba(white, 0.5);
+    text-shadow: 0 0 5px rgba($blue, 0.35);
+  }
 }

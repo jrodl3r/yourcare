@@ -48,12 +48,11 @@ header {
           height: inherit;
           width: 130px;
           padding: 0;
+          text-align: center;
+          font: 14px $font-gotham;
           color: $nav-text-color;
-          font-size: 14px;
-          font-family: $font-gotham;
           text-transform: uppercase;
           text-decoration: none;
-          text-align: center;
           @include no-outline();
           @include transition-duration($main-nav-delay);
 
@@ -62,8 +61,8 @@ header {
           }
 
           &.active, &.active:hover {
+            font: $font-multicolore;
             color: $subnav-active-color;
-            font-family: $font-multicolore;
             background-position: center 35px;
             cursor: default;
           }
@@ -120,8 +119,8 @@ header .submenu {
         height: 36px;
         width: 100%;
         text-align: center;
+        font: $font-gotham;
         color: $subnav-color;
-        font-family: $font-gotham;
         line-height: 36px;
         text-decoration: none;
         cursor: pointer;
@@ -310,9 +309,9 @@ footer .invite {
 
   h4 {
     margin: 12px 0;
-    color: $main-color;
     font-family: $font-multicolore;
     font-weight: normal;
+    color: $main-color;
     cursor: default;
   }
 }
