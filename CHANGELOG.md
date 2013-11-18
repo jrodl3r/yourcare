@@ -17,15 +17,18 @@
 * **READY** Setup Susy grid layout system
 
 ###Phase 3
-* Add grunt-ngmin to build proc
 * **READY** Setup AngularJS header-nav logic
 * **READY** Setup AngularJS routing animations
 * **READY** Panel UI: Alerts
 * **READY** Panel UI: Running Mate (iOS switches, gMaps)
 * **READY** Panel UI: Tools & Resources
+* **READY** Panel UI: Health Stats + Medications
+* **READY** Panel UI: Panel Tabbed-Menus
+* Panel UI: Health Record + Goals Tabbed Panels
+* Panel UI: Badges Panel
 * Panel UI: Leaderboard (header, body, flyout menus)
-* Panel UI: Nav Elements (options menu, tabs)
 * Panel UI: Calorie Burner (loading animation)
+* Panel UI: Options Menus
 * Setup interior-page lateral routing animations 
 * Modal dialog system (avgrund)
 * Drag-n-drop modular panel system
@@ -36,6 +39,7 @@
 
 
 ###Next
+* Add grunt-ngmin to build proc
 * Explore pinning-feature options
 * Setup scalable css gradient background
 * Panel fade load-in (pinterest-style)

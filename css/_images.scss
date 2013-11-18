@@ -10,21 +10,6 @@
 
 // Panels
 .panel {
-  // Options Buttons
-  .options {
-    background: inline_image('../img/panel-options-button-off.svg') center no-repeat;
-    &.on {
-      background-image: inline_image('../img/panel-options-button-on.svg');
-    }
-  }
-
-  // Plus Icon-Buttons
-  a.plus, span.plus {
-    background: inline_image('../img/button-white-plus.svg') center no-repeat;
-  }
-  .blue a.plus, .blue span.plus {
-    background: inline_image('../img/button-blue-plus.svg') center no-repeat;
-  }
 
   // Tools & Resources
   &.tools ul li {
@@ -71,6 +56,70 @@
     &.calories {
       background: inline_image('../img/icon-white-burn.svg') center left no-repeat;
     }
+  }
+
+  // Options Buttons
+  .options {
+    background: inline_image('../img/panel-options-button-off.svg') center no-repeat;
+    &.on {
+      background-image: inline_image('../img/panel-options-button-on.svg');
+    }
+  }
+
+  // Plus Icon-Buttons
+  a.plus, span.plus {
+    background: inline_image('../img/button-white-plus.svg') center no-repeat;
+  }
+  .blue a.plus, .blue span.plus {
+    background: inline_image('../img/button-blue-plus.svg') center no-repeat;
+  }
+
+  // Panel Icons
+  .checkmark-icon {
+    background: inline_image('../img/icon-aqua-checkmark.svg') center left no-repeat;
+  }
+  .exclamation-icon {
+    background: inline_image('../img/icon-red-exclamation.svg') center left no-repeat;
+  }
+
+  // Tab-Menu Icons
+  .tab-menu {
+    .download-icon {
+      background-image: inline_image('../img/icon-gray-small-download.svg');
+
+      &:hover {
+        background-image: inline_image('../img/icon-aqua-small-download.svg');
+      }
+    }
+    .graph-icon {
+      background-image: inline_image('../img/icon-gray-small-graph.svg');
+
+      &:hover {
+        background-image: inline_image('../img/icon-aqua-small-graph.svg');
+      }
+    }
+    .checkmark-icon {
+      background-image: inline_image('../img/icon-gray-small-checkmark.svg');
+
+      &:hover {
+        background-image: inline_image('../img/icon-aqua-small-checkmark.svg');
+      }
+    }
+    .send-icon {
+      background-image: inline_image('../img/icon-gray-small-send.svg');
+
+      &:hover {
+        background-image: inline_image('../img/icon-aqua-small-send.svg');
+      }
+    }
+    .pill-icon {
+      background-image: inline_image('../img/icon-gray-small-pill.svg');
+
+      &:hover {
+        background-image: inline_image('../img/icon-aqua-small-pill.svg');
+      }
+    }
+
   }
 }
 

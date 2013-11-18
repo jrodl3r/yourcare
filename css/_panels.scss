@@ -5,7 +5,7 @@
 .panel {
   position: relative;
   float: left;
-  min-height: 200px;
+  min-height: 270px;
   margin-bottom: $grid-padding;
   padding: 10px 0;
   background-color: white;
@@ -21,6 +21,18 @@
   h3 {
     margin-top: 10px;
     font-size: 21px;
+    text-align: center;
+  }
+  h4 {
+    margin-bottom: 0;
+    font: 18px $font-multicolore;
+    color: $navy;
+    text-align: center;
+  }
+  h5 {
+    margin-top: 10px;
+    font: 18px $font-gotham;
+    color: $dark-blue;
     text-align: center;
   }
 
@@ -52,6 +64,14 @@
     &:hover {
       opacity: 0.75;
     }
+  }
+
+  .checkmark-icon,
+  .exclamation-icon {
+    height: 40px;
+    width: 40px;
+    display: block;
+    margin: 0 auto;
   }
 }
 
@@ -94,6 +114,47 @@
       margin: 0;
       text-align: left;
       text-indent: 23px;
+    }
+  }
+}
+
+// Panel Tab-Menus
+.panel.tabbed {
+  padding-bottom: 0;
+  overflow: hidden;
+
+  ul.tab-menu {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    height: 65px;
+    width: 100%;
+
+    li {
+      float: left;
+      width: 33.33%;
+      height: inherit;
+
+      a {
+        display: block;
+        width: 100%;
+        height: inherit;
+        text-align: center;
+        text-decoration: none;
+        font: 15px $font-gotham;
+        line-height: 95px;
+        color: $subnav-color;
+        background-color: $soft-white;
+        background-position: center 9px;
+        background-repeat: no-repeat;
+        border-top: 1px solid $lighter-gray;
+
+        &:hover {
+          color: $aqua;
+          background-color: white;
+          border-top: 1px solid white;
+        }
+      }
     }
   }
 }
@@ -151,8 +212,47 @@
   }
 }
 
+// Tools & Resources Panel
+.panel.tools {
+  min-height: 200px;
+  padding-bottom: 0;
+
+  ul {
+    width: 90%;
+    margin: -10px 0 0 20px;
+
+    li {
+      float: left;
+      width: 97%;
+      margin-left: 3%;
+
+      a {
+        float: left;
+        height: 25px;
+        width: 80%;
+        padding: 5px 0 5px 45px;
+        font: 15px $font-gotham;
+        color: white;
+        text-decoration: none;
+        line-height: 25px;
+        opacity: 0.8;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        span.plus {
+          float: right;
+          margin-top: 1px;
+        }
+      }
+    }
+  }
+}
+
+// Running-Warrior Panel
 .panel.runner {
-  height: 375px;
+  height: 376px;
   background: url(../img/placeholder-map.png) right 40px no-repeat;
   overflow: hidden;
 
@@ -186,6 +286,7 @@
     }
   }
 
+  // Fly-Out Panel Menu
   ul.flyout {
     height: 100%;
     width: 50%;
@@ -231,49 +332,11 @@
   }
 }
 
-.panel.tools {
+.panel.leaderboard {
+  height: 460px;
   padding-bottom: 0;
 
-  ul {
-    width: 90%;
-    margin: -10px 0 0 20px;
-
-    li {
-      float: left;
-      width: 97%;
-      margin-left: 3%;
-
-      a {
-        float: left;
-        height: 25px;
-        width: 80%;
-        padding: 5px 0 5px 45px;
-        color: white;
-        text-decoration: none;
-        line-height: 25px;
-        opacity: 0.8;
-
-        &:hover {
-          opacity: 1;
-        }
-
-        &.download {
-
-        }
-        &.wrench {
-
-        }
-        &.add {
-
-        }
-        &.doc {
-
-        }
-        span.plus {
-          float: right;
-          margin-top: 1px;
-        }
-      }
-    }
+  .header {
+    height: 80px;
   }
 }
