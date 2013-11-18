@@ -1157,6 +1157,10 @@ footer .invite button {
   height: 80px;
 }
 
+.panel.badges {
+  height: 440px;
+}
+
 button {
   padding: 0;
   text-align: center;
