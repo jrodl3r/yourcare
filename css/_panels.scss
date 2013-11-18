@@ -22,12 +22,20 @@
     margin-top: 10px;
     font-size: 21px;
     text-align: center;
+
+    &.health-goals {
+      margin-bottom: 10px;
+    }
   }
   h4 {
     margin-bottom: 0;
     font: 18px $font-multicolore;
     color: $navy;
     text-align: center;
+
+    &.health-goals {
+      margin-top: 15px;
+    }
   }
   h5 {
     margin-top: 10px;
@@ -66,12 +74,21 @@
     }
   }
 
-  .checkmark-icon,
-  .exclamation-icon {
+  .aqua-checkmark-icon,
+  .red-exclamation-icon,
+  .purple-blocks-icon,
+  .blue-doc-icon {
     height: 40px;
     width: 40px;
     display: block;
     margin: 0 auto;
+  }
+  .blue-doc-icon {
+    height: 53px;
+  }
+  .purple-blocks-icon {
+    height: 75px;
+    width: 75px;
   }
 }
 

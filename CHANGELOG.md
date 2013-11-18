@@ -24,7 +24,7 @@
 * **READY** Panel UI: Tools & Resources
 * **READY** Panel UI: Health Stats + Medications
 * **READY** Panel UI: Panel Tabbed-Menus
-* Panel UI: Health Record + Goals Tabbed Panels
+* **READY** Panel UI: Health Record + Goals Tabbed Panels
 * Panel UI: Badges Panel
 * Panel UI: Leaderboard (header, body, flyout menus)
 * Panel UI: Calorie Burner (loading animation)
