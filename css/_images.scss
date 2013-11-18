@@ -84,8 +84,23 @@
   .blue-doc-icon {
     background: inline_image('../img/icon-blue-doc.svg') center left no-repeat;
   }
-  .purple-blocks-icon {
-    background: inline_image('../img/icon-purple-blocks.svg') center left no-repeat;
+
+  // Panel Badges
+  .large-air-badge {
+    background: inline_image('../img/badge-large-blue-air.svg') center left no-repeat;
+  }
+
+  .purple-blocks-badge {
+    background: inline_image('../img/badge-purple-blocks.svg') center left no-repeat;
+  }
+  .orange-gym-badge {
+    background: inline_image('../img/badge-orange-gym.svg') center left no-repeat;
+  }
+  .pink-yoga-badge {
+    background: inline_image('../img/badge-pink-yoga.svg') center left no-repeat;
+  }
+  .yellow-nutrition-badge {
+    background: inline_image('../img/badge-yellow-nutrition.svg') center left no-repeat;
   }
 
   // Tab-Menu Icons

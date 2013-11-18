@@ -76,8 +76,12 @@
 
   .aqua-checkmark-icon,
   .red-exclamation-icon,
-  .purple-blocks-icon,
-  .blue-doc-icon {
+  .blue-doc-icon,
+  .large-air-badge,
+  .purple-blocks-badge,
+  .orange-gym-badge,
+  .pink-yoga-badge,
+  .yellow-nutrition-badge {
     height: 40px;
     width: 40px;
     display: block;
@@ -86,9 +90,13 @@
   .blue-doc-icon {
     height: 53px;
   }
-  .purple-blocks-icon {
+  .purple-blocks-badge {
     height: 75px;
     width: 75px;
+  }
+  .large-air-badge {
+    height: 125px;
+    width: 125px;
   }
 }
 
@@ -221,8 +229,7 @@
 
         button {
           width: 120px;
-          margin-top: 5px;
-          margin-bottom: 10px;
+          margin: 5px auto 10px;
         }
       }
     }
@@ -359,5 +366,66 @@
 }
 
 .panel.badges {
-  height: 440px;
+
+  .inner {
+    width: 93%;
+    margin: 0 auto;
+    min-width: 0;
+    padding: 0 !important;
+
+    h3 {
+      padding-bottom: 5px;
+      text-align: left;
+      border-bottom: 1px solid $lighter-gray;
+    }
+
+    div.left {
+      @include span-columns(6, 12);
+      @include box-sizing(border-box);
+      border-right: 1px solid $lighter-gray;
+
+      .badge {
+        margin: 20px auto 15px;
+      }
+
+      h5 {
+
+      }
+    }
+
+    div.right {
+      @include span-columns(6 omega, 12);
+
+      h4 {
+        margin-bottom: 25px;
+      }
+
+      > div {
+        height: 120px;
+        @include span-columns(6 omega, 12);
+
+        h4 {
+          margin-top: 5px;
+          font-size: 15px;
+        }
+
+        .badge {
+          height: 75px;
+          width: 75px;
+        }
+      }
+    }
+
+    div.full {
+      float: left;
+      clear: both;
+      width: 100%;
+      padding: 30px 0 20px;
+
+      button {
+        width: 95%;
+        margin: 0 auto;
+      }
+    }
+  }
 }

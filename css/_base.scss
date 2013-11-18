@@ -160,7 +160,7 @@ h3 {
     }
 
     .left-content {
-      @include span-columns(8,12);
+      @include span-columns(8, 12);
     }
 
     .right-column {

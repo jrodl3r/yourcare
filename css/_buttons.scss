@@ -38,12 +38,10 @@ button {
       background-color: $aqua;
     }
   }
-
-  // &.blue {}
 }
 
 .panel button {
-  display: inline-block;
+  display: block;
   width: 120px;
   padding: 6px 0 4px;
   font: 14px $font-gotham;
@@ -52,8 +50,25 @@ button {
   @include border-radius(8px);
 
   &:hover {
+    text-shadow: 0 0 5px rgba($blue, 0.35);
     background-color: rgba(white, 0.85) !important;
     box-shadow: 0 0 13px rgba(white, 0.5);
-    text-shadow: 0 0 5px rgba($blue, 0.35);
+  }
+
+  &.blue {
+    padding: 12px 0 8px;
+    font: 14px $font-multicolore;
+    color: white;
+    background-color: $blue;
+    @include border-radius(4px);
+
+    &:hover {
+      color: lighten($light-gray, 15%);
+      text-shadow: 0 0 5px darken($blue, 15%);
+      background-color: lighten($blue, 5%) !important;
+    }
+  }
+  &.full {
+    width: 100%;
   }
 }
