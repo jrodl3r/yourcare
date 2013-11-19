@@ -1305,7 +1305,7 @@ footer .invite button {
   display: block;
   height: 18px;
   width: 150px;
-  margin: -15px 0 0 25px;
+  margin: -15px 0 0 30px;
 }
 .panel.leaderboard .quote-box-small .gliph-location,
 .panel.leaderboard .quote-box-large .gliph-location {
@@ -1346,6 +1346,22 @@ footer .invite button {
 }
 .panel.leaderboard .quote-box-small .plus {
   top: 21px;
+}
+.panel.leaderboard .single-line {
+  position: relative;
+  top: 36px;
+  left: 170px;
+  font: 13px GothamBook, Helvetica, Arial, sans-serif;
+}
+.panel.leaderboard .single-line strong {
+  font: 14px GothamMedium, Helvetica, Arial, sans-serif;
+}
+.panel.leaderboard .single-line span {
+  font: 14px GothamMedium, Helvetica, Arial, sans-serif;
+  color: #d91c5c;
+}
+.panel.leaderboard .single-line.bottom {
+  top: 166px;
 }
 .panel.leaderboard .plus {
   position: absolute;
