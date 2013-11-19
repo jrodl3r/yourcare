@@ -902,6 +902,7 @@ footer .invite button {
 .panel a.plus:hover, .panel span.plus:hover {
   opacity: 0.75;
 }
+
 .panel .aqua-checkmark-icon,
 .panel .red-exclamation-icon,
 .panel .blue-doc-icon,
@@ -971,6 +972,89 @@ footer .invite button {
   margin: 0;
   text-align: left;
   text-indent: 23px;
+}
+
+.panel .header .tab-bar,
+.panel .header .focus-bar {
+  display: block;
+  height: 20px;
+  width: 310px;
+  margin: 7px auto 15px;
+}
+.panel .header .tab-bar li,
+.panel .header .focus-bar li {
+  float: left;
+  width: 60px;
+  border: 1px solid #cccccc;
+  border-right: 0;
+}
+.panel .header .tab-bar li a,
+.panel .header .focus-bar li a {
+  float: left;
+  height: 20px;
+  width: 100%;
+  text-align: center;
+  line-height: 22px;
+  font-size: 13px;
+  font-family: GothamBook, Helvetica, Arial, sans-serif;
+  color: #8e8e93;
+  text-decoration: none;
+}
+.panel .header .tab-bar li a:hover,
+.panel .header .focus-bar li a:hover {
+  background-color: #eeeeee;
+}
+.panel .header .tab-bar li.active,
+.panel .header .focus-bar li.active {
+  border-color: #d91c5c;
+  border-right: 1px solid #d91c5c;
+}
+.panel .header .tab-bar li.active + li,
+.panel .header .focus-bar li.active + li {
+  border-left: 0;
+}
+.panel .header .tab-bar li.active a,
+.panel .header .focus-bar li.active a {
+  color: #d91c5c;
+  font-family: GothamMedium, Helvetica, Arial, sans-serif;
+  cursor: default;
+}
+.panel .header .tab-bar li.active a:hover,
+.panel .header .focus-bar li.active a:hover {
+  background-color: white;
+}
+.panel .header .tab-bar li:last-of-type,
+.panel .header .focus-bar li:last-of-type {
+  border-right: 1px solid #cccccc;
+}
+
+.panel .header .focus-bar {
+  width: 185px;
+  margin: 0 auto;
+}
+.panel .header .focus-bar li {
+  width: 90px;
+  border: none;
+}
+.panel .header .focus-bar li a {
+  color: #8e8e93;
+  background-color: #eeeeee;
+}
+.panel .header .focus-bar li a:hover {
+  background-color: #e1e1e1;
+}
+.panel .header .focus-bar li.active {
+  border: none;
+}
+.panel .header .focus-bar li.active a {
+  color: white;
+  background-color: #007aff;
+}
+.panel .header .focus-bar li.active a:hover {
+  background-color: #007aff;
+}
+.panel .header .focus-bar li:last-of-type {
+  border: none;
 }
 
 .panel.tabbed {
@@ -1161,7 +1245,7 @@ footer .invite button {
   padding-bottom: 0;
 }
 .panel.leaderboard .header {
-  height: 80px;
+  height: 90px;
 }
 
 .panel.badges .inner {
