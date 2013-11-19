@@ -26,7 +26,7 @@
 * **READY** Panel UI: Panel Tabbed-Menus
 * **READY** Panel UI: Health Record + Goals Tabbed Panels
 * **READY** Panel UI: Badges Panel
-* Panel UI: Leaderboard (header, body, flyout menus)
+* **READY** Panel UI: Leaderboard (header, body, flyout menus)
 * Panel UI: Calorie Burner (loading animation)
 * Panel UI: Options Menus
 * Setup interior-page lateral routing animations 
