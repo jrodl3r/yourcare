@@ -459,6 +459,27 @@
   .header {
     height: 90px;
   }
+
+  a.down-arrow {
+    @extend .ir;
+    position: absolute;
+    bottom: 20px;
+    right: 12px;
+    height: 15px;
+    width: 27px;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  button {
+    position: absolute;
+    bottom: 20px;
+    right: 60px;
+    width: 130px;
+  }
 }
 
 // Badges Panel
