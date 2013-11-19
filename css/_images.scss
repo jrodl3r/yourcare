@@ -145,7 +145,36 @@
         background-image: inline_image('../img/icon-aqua-small-pill.svg');
       }
     }
+  }
 
+  &.leaderboard {
+    .user-male {
+      background: inline_image('../img/user-male.svg') center no-repeat;
+    }
+    .user-female {
+      background: inline_image('../img/user-female.svg') center no-repeat;
+    }
+    .timeline {
+      background: inline_image('../img/leaderboard-timeline.svg') center no-repeat;
+    }
+    .quote-box-small {
+      background: inline_image('../img/quote-box-small.svg') left top no-repeat;
+    }
+    .quote-box-large {
+      background: inline_image('../img/quote-box-large.svg') left top no-repeat;
+    }
+    .gliph-motivation {
+      background: inline_image('../img/gliph-motivation.svg') left top no-repeat;
+    }
+    .gliph-beautiful {
+      background: inline_image('../img/gliph-beautiful.svg') left top no-repeat;
+    }
+    .gliph-location {
+      background: inline_image('../img/gliph-location.svg') left top no-repeat;
+    }
+    .gliph-camera {
+      background: inline_image('../img/gliph-camera.svg') left top no-repeat;
+    }
   }
 }
 

@@ -453,11 +453,129 @@
 
 // Leaderboard Panel
 .panel.leaderboard {
-  height: 460px;
+  height: 415px;
   padding-bottom: 0;
+  overflow: hidden;
 
   .header {
     height: 90px;
+  }
+
+  .user-male,
+  .user-female {
+    position: absolute;
+    top: 115px;
+    left: 20px;
+    height: 125px;
+    width: 125px;
+
+    span {
+      position: absolute;
+      bottom: 24px;
+      left: 40px;
+      font: 16px $font-gotham-med;
+      color: $red;
+      padding: 1px 4px;
+      background: rgba($gray, 0.3);
+      @include border-radius(5px);
+    }
+  }
+
+  .user-male {
+    top: 260px;
+
+    span {
+      left: 43px;
+    }
+  }
+
+  .timeline {
+    position: absolute;
+    left: 125px;
+    display: block;
+    height: 300px;
+    width: 20px;
+  }
+
+  .quote-box-small,
+  .quote-box-large {
+    position: absolute;
+    top: 177px;
+    left: 150px;
+    display: block;
+    height: 115px;
+    width: 305px;
+    font: 14px $font-gotham;
+    color: white;
+
+    p {
+      padding-left: 30px;
+      margin-top: 8px;
+    }
+
+    .gliph-beautiful {
+      display: block;
+      height: 18px;
+      width: 150px;
+      margin: -15px 0 0 25px;
+    }
+
+    .gliph-location {
+      position: absolute;
+      top: 70px;
+      left: 30px;
+      display: block;
+      height: 22px;
+      width: 14px;
+    }
+    .gliph-camera {
+      position: absolute;
+      top: 70px;
+      left: 135px;
+      display: block;
+      height: 28px;
+      width: 30px;
+    }
+    img {
+      float: left;
+      margin-left: 50px;
+    }
+  }
+  .quote-box-small {
+    top: 323px;
+    left: 148px;
+    height: 80px;
+
+    p {
+      margin-top: 8px;
+    }
+
+    .gliph-motivation {
+      display: block;
+      height: 18px;
+      width: 150px;
+      margin: -15px 0 0 25px;
+    }
+
+    .plus {
+      top: 21px;
+    }
+  }
+
+  .plus {
+    @extend .ir;
+    position: absolute;
+    left: 315px;
+    top: 47px;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    opacity: 0.8;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 1;
+    }
   }
 
   a.down-arrow {
